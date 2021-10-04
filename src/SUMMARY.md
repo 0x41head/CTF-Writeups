@@ -17,7 +17,7 @@
     - [RSA-2](./DeconstruCT.F/Cryptography/RSA-2.md)
     - [RSA-3](./DeconstruCT.F/Cryptography/RSA-3.md)
     - [Code Decode](./DeconstruCT.F/Cryptography/CodeDecode.md)
-    - [Extend Reality](.DeconstruCT.F/OSINT/ExtendReality.md)
+    - [Extend Reality](./DeconstruCT.F/OSINT/ExtendReality.md)
     - [Here's a flag](./DeconstruCT.F/Web/Here'saflag.md)
     - [Please](./DeconstruCT.F/Web/Please.md)
     - [Pirates](./DeconstruCT.F/Forensics/Pirates.md)
