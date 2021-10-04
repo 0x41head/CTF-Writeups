@@ -14,3 +14,5 @@ The flag was retrieved :)
 
 ### Notes:
 ### Reference:
+### Tags:
+`Misc` , `Blockchain`

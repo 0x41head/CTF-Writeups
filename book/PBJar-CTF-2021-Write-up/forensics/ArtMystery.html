@@ -238,6 +238,8 @@ No errors detected in art.png (30 chunks, 52.6% compression).
 <h3 id="reference"><a class="header" href="#reference">Reference:</a></h3>
 <p>https://ctf-wiki.mahaloz.re/misc/picture/png/</p>
 <p>http://www.libpng.org/pub/png/spec/1.2/PNG-Chunks.html</p>
+<h3 id="tags"><a class="header" href="#tags">Tags:</a></h3>
+<p><code>Forensics</code> , <code>png</code> , <code>image</code></p>
 
                     </main>
 
@@ -265,6 +267,20 @@ No errors detected in art.png (30 chunks, 52.6% compression).
 
         </div>
 
+        <!-- Livereload script (if served using the cli tool) -->
+        <script type="text/javascript">
+            var socket = new WebSocket("ws://localhost:3000/__livereload");
+            socket.onmessage = function (event) {
+                if (event.data === "reload") {
+                    socket.close();
+                    location.reload();
+                }
+            };
+
+            window.onbeforeunload = function() {
+                socket.close();
+            }
+        </script>
         <script type="text/javascript">
             window.playground_copyable = true;
         </script>

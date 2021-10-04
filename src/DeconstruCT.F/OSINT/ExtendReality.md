@@ -11,3 +11,5 @@ Looking at the live chat of the video I retrieved the flag.
 
 ### Notes:
 ### Reference:
+### Tags:
+`OSINT` 

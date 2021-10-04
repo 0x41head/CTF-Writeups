@@ -154,6 +154,8 @@ mistake.</p>
 <p>I spent a good 30 minutes trying to understand why the get function was not retriving anything, before realising that I was in the Ethereum Mainnet</p>
 <h3 id="reference"><a class="header" href="#reference">Reference:</a></h3>
 <p>https://chowdera.com/2021/09/20210901002857800n.html</p>
+<h3 id="tags"><a class="header" href="#tags">Tags:</a></h3>
+<p><code>Misc</code> , <code>Blockchain</code></p>
 
                     </main>
 
@@ -181,6 +183,20 @@ mistake.</p>
 
         </div>
 
+        <!-- Livereload script (if served using the cli tool) -->
+        <script type="text/javascript">
+            var socket = new WebSocket("ws://localhost:3000/__livereload");
+            socket.onmessage = function (event) {
+                if (event.data === "reload") {
+                    socket.close();
+                    location.reload();
+                }
+            };
+
+            window.onbeforeunload = function() {
+                socket.close();
+            }
+        </script>
         <script type="text/javascript">
             window.playground_copyable = true;
         </script>

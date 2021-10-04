@@ -1169,3 +1169,5 @@ Combining everything I found, I retrived the flag.
 
 ### Notes:
 ### Reference:
+### Tags:
+`Forensics` , `pdf` 

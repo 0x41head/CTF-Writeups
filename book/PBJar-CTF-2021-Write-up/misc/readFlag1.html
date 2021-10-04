@@ -143,6 +143,8 @@
 <p><img src="https://user-images.githubusercontent.com/53595853/133967600-6563798e-c8cd-4f63-be47-6130e9a94d0c.png" alt="crf1" /></p>
 <h3 id="notes"><a class="header" href="#notes">Notes:</a></h3>
 <h3 id="reference"><a class="header" href="#reference">Reference:</a></h3>
+<h3 id="tags"><a class="header" href="#tags">Tags:</a></h3>
+<p><code>Misc</code> , <code>Blockchain</code></p>
 
                     </main>
 
@@ -170,6 +172,20 @@
 
         </div>
 
+        <!-- Livereload script (if served using the cli tool) -->
+        <script type="text/javascript">
+            var socket = new WebSocket("ws://localhost:3000/__livereload");
+            socket.onmessage = function (event) {
+                if (event.data === "reload") {
+                    socket.close();
+                    location.reload();
+                }
+            };
+
+            window.onbeforeunload = function() {
+                socket.close();
+            }
+        </script>
         <script type="text/javascript">
             window.playground_copyable = true;
         </script>

@@ -31,3 +31,5 @@ I spent a good 30 minutes trying to understand why the get function was not retr
 
 ### Reference:
 https://chowdera.com/2021/09/20210901002857800n.html
+### Tags:
+`Misc` , `Blockchain`

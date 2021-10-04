@@ -200,6 +200,8 @@ The transaction went through which made me the owner of that contract.</p>
 <h3 id="reference"><a class="header" href="#reference">Reference:</a></h3>
 <p>https://www.sitepoint.com/compiling-smart-contracts-abi/</p>
 <p>https://ethereum.stackexchange.com/questions/31481/web3-js-can-i-call-a-smart-contract-function-without-knowing-the-abi</p>
+<h3 id="tags"><a class="header" href="#tags">Tags:</a></h3>
+<p><code>Misc</code> , <code>Blockchain</code></p>
 
                     </main>
 
@@ -227,6 +229,20 @@ The transaction went through which made me the owner of that contract.</p>
 
         </div>
 
+        <!-- Livereload script (if served using the cli tool) -->
+        <script type="text/javascript">
+            var socket = new WebSocket("ws://localhost:3000/__livereload");
+            socket.onmessage = function (event) {
+                if (event.data === "reload") {
+                    socket.close();
+                    location.reload();
+                }
+            };
+
+            window.onbeforeunload = function() {
+                socket.close();
+            }
+        </script>
         <script type="text/javascript">
             window.playground_copyable = true;
         </script>

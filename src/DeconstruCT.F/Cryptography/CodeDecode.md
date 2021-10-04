@@ -120,3 +120,5 @@ encrypted text was based on.
 Now that I found the character-key I used it on the encrypted text and retrieved the flag using [cryptii](https://cryptii.com/)
 ### Notes:
 ### Reference:
+### Tags:
+`Crypto` 

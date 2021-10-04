@@ -147,6 +147,8 @@ Filtering out the <code>http</code> requests I can see a packet with the info <c
 <p>There I found the flag</p>
 <h3 id="notes"><a class="header" href="#notes">Notes:</a></h3>
 <h3 id="reference"><a class="header" href="#reference">Reference:</a></h3>
+<h3 id="tags"><a class="header" href="#tags">Tags:</a></h3>
+<p><code>Forensics</code> , <code>Wireshark</code> </p>
 
                     </main>
 
@@ -174,6 +176,20 @@ Filtering out the <code>http</code> requests I can see a packet with the info <c
 
         </div>
 
+        <!-- Livereload script (if served using the cli tool) -->
+        <script type="text/javascript">
+            var socket = new WebSocket("ws://localhost:3000/__livereload");
+            socket.onmessage = function (event) {
+                if (event.data === "reload") {
+                    socket.close();
+                    location.reload();
+                }
+            };
+
+            window.onbeforeunload = function() {
+                socket.close();
+            }
+        </script>
         <script type="text/javascript">
             window.playground_copyable = true;
         </script>

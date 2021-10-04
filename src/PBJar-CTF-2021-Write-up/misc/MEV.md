@@ -42,3 +42,6 @@ I discovered the bribe, and more importantly the flag!
 https://ethereum.org/en/developers/docs/mev/
 
 https://beinchain.com/the-rise-of-mev-in-ethereum-technical-view
+
+### Tags:
+`Misc` , `Blockchain`

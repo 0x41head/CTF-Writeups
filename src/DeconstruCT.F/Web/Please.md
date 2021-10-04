@@ -30,3 +30,5 @@ Basic Authorization uses base64 encoding
 https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Authorization
 
 https://www.geeksforgeeks.org/http-headers-date/
+### Tags:
+`Web`,`Burp Suite` 

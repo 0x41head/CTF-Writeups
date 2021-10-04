@@ -99,3 +99,5 @@ STR : b'dsc{t0-m355-w1th-m4th-t4k35-4-l0t-0f-sp1n3}'
 
 ### Notes:
 ### Reference:
+### Tags:
+`Crypto` 

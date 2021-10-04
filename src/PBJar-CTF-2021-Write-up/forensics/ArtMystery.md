@@ -147,3 +147,6 @@ retrieved the flag!
 https://ctf-wiki.mahaloz.re/misc/picture/png/
 
 http://www.libpng.org/pub/png/spec/1.2/PNG-Chunks.html
+
+### Tags:
+`Forensics` , `png` , `image`

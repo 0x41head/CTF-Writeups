@@ -142,6 +142,8 @@ Looking at the live chat of the video I retrieved the flag.</p>
 <p><img src="https://user-images.githubusercontent.com/53595853/135754470-e6877f3f-59c1-4f90-9213-d38b6d00c82f.png" alt="8" /></p>
 <h3 id="notes"><a class="header" href="#notes">Notes:</a></h3>
 <h3 id="reference"><a class="header" href="#reference">Reference:</a></h3>
+<h3 id="tags"><a class="header" href="#tags">Tags:</a></h3>
+<p><code>OSINT</code> </p>
 
                     </main>
 
@@ -169,6 +171,20 @@ Looking at the live chat of the video I retrieved the flag.</p>
 
         </div>
 
+        <!-- Livereload script (if served using the cli tool) -->
+        <script type="text/javascript">
+            var socket = new WebSocket("ws://localhost:3000/__livereload");
+            socket.onmessage = function (event) {
+                if (event.data === "reload") {
+                    socket.close();
+                    location.reload();
+                }
+            };
+
+            window.onbeforeunload = function() {
+                socket.close();
+            }
+        </script>
         <script type="text/javascript">
             window.playground_copyable = true;
         </script>

@@ -142,6 +142,8 @@
 <p>So, the flag became <code>flag{0xd224ca0c819e8e97ba0136b3b95ceff503b79f53}</code></p>
 <h3 id="notes"><a class="header" href="#notes">Notes:</a></h3>
 <h3 id="reference"><a class="header" href="#reference">Reference:</a></h3>
+<h3 id="tags"><a class="header" href="#tags">Tags:</a></h3>
+<p><code>Misc</code> , <code>Blockchain</code></p>
 
                     </main>
 
@@ -169,6 +171,20 @@
 
         </div>
 
+        <!-- Livereload script (if served using the cli tool) -->
+        <script type="text/javascript">
+            var socket = new WebSocket("ws://localhost:3000/__livereload");
+            socket.onmessage = function (event) {
+                if (event.data === "reload") {
+                    socket.close();
+                    location.reload();
+                }
+            };
+
+            window.onbeforeunload = function() {
+                socket.close();
+            }
+        </script>
         <script type="text/javascript">
             window.playground_copyable = true;
         </script>

@@ -10,3 +10,6 @@ So, the flag became `flag{0xd224ca0c819e8e97ba0136b3b95ceff503b79f53}`
 
 ### Notes:
 ### Reference:
+
+### Tags:
+`Misc` , `Blockchain`

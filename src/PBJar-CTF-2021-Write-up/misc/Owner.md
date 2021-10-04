@@ -89,3 +89,6 @@ This challenge was probably the most difficult one I solved as I had no prior ex
 https://www.sitepoint.com/compiling-smart-contracts-abi/
 
 https://ethereum.stackexchange.com/questions/31481/web3-js-can-i-call-a-smart-contract-function-without-knowing-the-abi
+
+### Tags:
+`Misc` , `Blockchain`

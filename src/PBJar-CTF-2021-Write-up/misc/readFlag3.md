@@ -13,3 +13,5 @@ After looking around a bit I found the flag.
 
 ### Notes:
 ### Reference:
+### Tags:
+`Misc` , `Blockchain`

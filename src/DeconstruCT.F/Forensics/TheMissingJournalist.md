@@ -74,3 +74,5 @@ and retrieve the flag !
 
 ### Notes:
 ### Reference:
+### Tags:
+`Forensics`,`gif` 

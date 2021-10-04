@@ -12,3 +12,5 @@ One look at the contract source code told me what the flag was.
 
 ### Notes:
 ### Reference:
+### Tags:
+`Misc` , `Blockchain`

@@ -62,3 +62,6 @@ https://stackoverflow.com/questions/49878381/rsa-decryption-using-only-n-e-and-c
 https://bitsdeep.com/posts/attacking-rsa-for-fun-and-ctf-points-part-1/
 
 https://github.com/Ganapati/RsaCtfTool
+
+### Tags:
+`Crypto` , `RSA`
