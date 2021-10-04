@@ -1,0 +1,243 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>The Missing Journalist - CTF Writeups</title>
+        <!-- Custom HTML head -->
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="../../favicon.svg">
+        <link rel="shortcut icon" href="../../favicon.png">
+        <link rel="stylesheet" href="../../css/variables.css">
+        <link rel="stylesheet" href="../../css/general.css">
+        <link rel="stylesheet" href="../../css/chrome.css">
+        <link rel="stylesheet" href="../../css/print.css" media="print">
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../../fonts/fonts.css">
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../../highlight.css">
+        <link rel="stylesheet" href="../../tomorrow-night.css">
+        <link rel="stylesheet" href="../../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="../../PBJar-CTF-2021-Write-up/index.html"><strong aria-hidden="true">1.</strong> PBjar CTF 2021</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../PBJar-CTF-2021-Write-up/crypto/Convert.html"><strong aria-hidden="true">1.1.</strong> Convert</a></li><li class="chapter-item expanded "><a href="../../PBJar-CTF-2021-Write-up/crypto/ReallynotSecureAlgorithm.html"><strong aria-hidden="true">1.2.</strong> ReallynotSecureAlgorithm</a></li><li class="chapter-item expanded "><a href="../../PBJar-CTF-2021-Write-up/misc/discordplz.html"><strong aria-hidden="true">1.3.</strong> discord plz</a></li><li class="chapter-item expanded "><a href="../../PBJar-CTF-2021-Write-up/misc/miner.html"><strong aria-hidden="true">1.4.</strong> miner</a></li><li class="chapter-item expanded "><a href="../../PBJar-CTF-2021-Write-up/misc/TechLead.html"><strong aria-hidden="true">1.5.</strong> TechLead</a></li><li class="chapter-item expanded "><a href="../../PBJar-CTF-2021-Write-up/misc/readFlag1.html"><strong aria-hidden="true">1.6.</strong> readFlag1</a></li><li class="chapter-item expanded "><a href="../../PBJar-CTF-2021-Write-up/misc/readFlag2.html"><strong aria-hidden="true">1.7.</strong> readFlag2</a></li><li class="chapter-item expanded "><a href="../../PBJar-CTF-2021-Write-up/misc/readFlag3.html"><strong aria-hidden="true">1.8.</strong> readFlag3</a></li><li class="chapter-item expanded "><a href="../../PBJar-CTF-2021-Write-up/misc/MEV.html"><strong aria-hidden="true">1.9.</strong> MEV</a></li><li class="chapter-item expanded "><a href="../../PBJar-CTF-2021-Write-up/misc/Owner.html"><strong aria-hidden="true">1.10.</strong> Owner</a></li><li class="chapter-item expanded "><a href="../../PBJar-CTF-2021-Write-up/forensics/ArtMystery.html"><strong aria-hidden="true">1.11.</strong> Art Mystery</a></li></ol></li><li class="chapter-item expanded "><a href="../../DeconstruCT.F/index.html"><strong aria-hidden="true">2.</strong> DeconstruCT.F 2021</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../DeconstruCT.F/Cryptography/RSA-1.html"><strong aria-hidden="true">2.1.</strong> RSA-1</a></li><li class="chapter-item expanded "><a href="../../DeconstruCT.F/Cryptography/RSA-2.html"><strong aria-hidden="true">2.2.</strong> RSA-2</a></li><li class="chapter-item expanded "><a href="../../DeconstruCT.F/Cryptography/RSA-3.html"><strong aria-hidden="true">2.3.</strong> RSA-3</a></li><li class="chapter-item expanded "><a href="../../DeconstruCT.F/Cryptography/CodeDecode.html"><strong aria-hidden="true">2.4.</strong> Code Decode</a></li><li class="chapter-item expanded "><a href="../../.DeconstruCT.F/OSINT/ExtendReality.html"><strong aria-hidden="true">2.5.</strong> Extend Reality</a></li><li class="chapter-item expanded "><a href="../../DeconstruCT.F/Web/Here'saflag.html"><strong aria-hidden="true">2.6.</strong> Here's a flag</a></li><li class="chapter-item expanded "><a href="../../DeconstruCT.F/Web/Please.html"><strong aria-hidden="true">2.7.</strong> Please</a></li><li class="chapter-item expanded "><a href="../../DeconstruCT.F/Forensics/Pirates.html"><strong aria-hidden="true">2.8.</strong> Pirates</a></li><li class="chapter-item expanded "><a href="../../DeconstruCT.F/Forensics/TegRads.html"><strong aria-hidden="true">2.9.</strong> Teg Rads</a></li><li class="chapter-item expanded "><a href="../../DeconstruCT.F/Forensics/TheMissingJournalist.html" class="active"><strong aria-hidden="true">2.10.</strong> The Missing Journalist</a></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">CTF Writeups</h1>
+
+                    <div class="right-buttons">
+                        <a href="../../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="problem-statement"><a class="header" href="#problem-statement">Problem Statement:</a></h1>
+<p><img src="https://user-images.githubusercontent.com/53595853/135742436-c0f510a9-3136-468d-a704-4dae4f859d0f.png" alt="q2" /></p>
+<h2 id="solution"><a class="header" href="#solution">Solution:</a></h2>
+<p>In this challenge we are provided a <code>.gif</code> file</p>
+<p><img src="https://user-images.githubusercontent.com/53595853/135742507-6716ad0a-1a8b-4b7d-992b-a998d07b43bc.gif" alt="the_journalist" /></p>
+<p>I first decided to look into the metadata of the gif using exiftool</p>
+<pre><code>$ exiftool the_journalist.gif
+ExifTool Version Number         : 11.88
+File Name                       : the_journalist.gif
+Directory                       : .
+File Size                       : 2.3 MB
+File Modification Date/Time     : 2021:10:01 15:56:51+05:30
+File Access Date/Time           : 2021:10:01 15:56:50+05:30
+File Inode Change Date/Time     : 2021:10:01 15:56:53+05:30
+File Permissions                : rw-rw-r--
+File Type                       : GIF
+File Type Extension             : gif
+MIME Type                       : image/gif
+GIF Version                     : 89a
+Image Width                     : 498
+Image Height                    : 314
+Has Color Map                   : Yes
+Color Resolution Depth          : 8
+Bits Per Pixel                  : 6
+Background Color                : 0
+Animation Iterations            : Infinite
+XMP Toolkit                     : Image::ExifTool 10.40
+Creator                         : Anish Raghavendra
+Rights                          : aDNfdzQ1X2w0NXRfczMzbl80dF90aDRfbTB2MTM1
+Title                           : The Journalist
+Frame Count                     : 40
+Duration                        : 4.00 s
+Image Size                      : 498x314
+Megapixels                      : 0.156
+</code></pre>
+<p>There seems to be , what looks like a base64 encrypted string</p>
+<p>Decrypting it we get,</p>
+<pre><code>$ echo &quot;aDNfdzQ1X2w0NXRfczMzbl80dF90aDRfbTB2MTM1&quot;|base64 -d
+h3_w45_l45t_s33n_4t_th4_m0v135
+</code></pre>
+<p>I tried putting this as the answer, after formatting it to the flag format. 
+But it wasn't the flag</p>
+<p>Next I checked for any embedded file inside using binwalk.</p>
+<pre><code>$ binwalk -e the_journalist.gif
+
+DECIMAL       HEXADECIMAL     DESCRIPTION
+--------------------------------------------------------------------------------
+0             0x0             GIF image data, version &quot;89a&quot;, 498 x 314
+2267488       0x229960        Zip archive data, at least v1.0 to extract, name: message/
+2267526       0x229986        Zip archive data, at least v2.0 to extract, compressed size: 112074, uncompressed size: 113455, name: message/message.pdf
+2379840       0x245040        End of Zip archive, footer length: 22
+</code></pre>
+<p>There seems to be a message.pdf inside it.</p>
+<p><img src="https://user-images.githubusercontent.com/53595853/135742801-257d0e93-2013-464a-8c12-f34e0b285425.png" alt="21" /></p>
+<p>I try that string I got, when looking into the metadata, as my password.</p>
+<p><img src="https://user-images.githubusercontent.com/53595853/135742876-fd7e03ce-f399-4e06-9dfb-5641e494607c.png" alt="22" /></p>
+<p>and retrieve the flag !</p>
+<h3 id="notes"><a class="header" href="#notes">Notes:</a></h3>
+<h3 id="reference"><a class="header" href="#reference">Reference:</a></h3>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../../DeconstruCT.F/Forensics/TegRads.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../../DeconstruCT.F/Forensics/TegRads.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+        <!-- Livereload script (if served using the cli tool) -->
+        <script type="text/javascript">
+            var socket = new WebSocket("ws://localhost:3000/__livereload");
+            socket.onmessage = function (event) {
+                if (event.data === "reload") {
+                    socket.close();
+                    location.reload();
+                }
+            };
+
+            window.onbeforeunload = function() {
+                socket.close();
+            }
+        </script>
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        <script src="../../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../searcher.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+    </body>
+</html>

@@ -1,0 +1,285 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>RSA-2 - CTF Writeups</title>
+        <!-- Custom HTML head -->
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="../../favicon.svg">
+        <link rel="shortcut icon" href="../../favicon.png">
+        <link rel="stylesheet" href="../../css/variables.css">
+        <link rel="stylesheet" href="../../css/general.css">
+        <link rel="stylesheet" href="../../css/chrome.css">
+        <link rel="stylesheet" href="../../css/print.css" media="print">
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../../fonts/fonts.css">
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../../highlight.css">
+        <link rel="stylesheet" href="../../tomorrow-night.css">
+        <link rel="stylesheet" href="../../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="../../PBJar-CTF-2021-Write-up/index.html"><strong aria-hidden="true">1.</strong> PBjar CTF 2021</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../PBJar-CTF-2021-Write-up/crypto/Convert.html"><strong aria-hidden="true">1.1.</strong> Convert</a></li><li class="chapter-item expanded "><a href="../../PBJar-CTF-2021-Write-up/crypto/ReallynotSecureAlgorithm.html"><strong aria-hidden="true">1.2.</strong> ReallynotSecureAlgorithm</a></li><li class="chapter-item expanded "><a href="../../PBJar-CTF-2021-Write-up/misc/discordplz.html"><strong aria-hidden="true">1.3.</strong> discord plz</a></li><li class="chapter-item expanded "><a href="../../PBJar-CTF-2021-Write-up/misc/miner.html"><strong aria-hidden="true">1.4.</strong> miner</a></li><li class="chapter-item expanded "><a href="../../PBJar-CTF-2021-Write-up/misc/TechLead.html"><strong aria-hidden="true">1.5.</strong> TechLead</a></li><li class="chapter-item expanded "><a href="../../PBJar-CTF-2021-Write-up/misc/readFlag1.html"><strong aria-hidden="true">1.6.</strong> readFlag1</a></li><li class="chapter-item expanded "><a href="../../PBJar-CTF-2021-Write-up/misc/readFlag2.html"><strong aria-hidden="true">1.7.</strong> readFlag2</a></li><li class="chapter-item expanded "><a href="../../PBJar-CTF-2021-Write-up/misc/readFlag3.html"><strong aria-hidden="true">1.8.</strong> readFlag3</a></li><li class="chapter-item expanded "><a href="../../PBJar-CTF-2021-Write-up/misc/MEV.html"><strong aria-hidden="true">1.9.</strong> MEV</a></li><li class="chapter-item expanded "><a href="../../PBJar-CTF-2021-Write-up/misc/Owner.html"><strong aria-hidden="true">1.10.</strong> Owner</a></li><li class="chapter-item expanded "><a href="../../PBJar-CTF-2021-Write-up/forensics/ArtMystery.html"><strong aria-hidden="true">1.11.</strong> Art Mystery</a></li></ol></li><li class="chapter-item expanded "><a href="../../DeconstruCT.F/index.html"><strong aria-hidden="true">2.</strong> DeconstruCT.F 2021</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../DeconstruCT.F/Cryptography/RSA-1.html"><strong aria-hidden="true">2.1.</strong> RSA-1</a></li><li class="chapter-item expanded "><a href="../../DeconstruCT.F/Cryptography/RSA-2.html" class="active"><strong aria-hidden="true">2.2.</strong> RSA-2</a></li><li class="chapter-item expanded "><a href="../../DeconstruCT.F/Cryptography/RSA-3.html"><strong aria-hidden="true">2.3.</strong> RSA-3</a></li><li class="chapter-item expanded "><a href="../../DeconstruCT.F/Cryptography/CodeDecode.html"><strong aria-hidden="true">2.4.</strong> Code Decode</a></li><li class="chapter-item expanded "><a href="../../.DeconstruCT.F/OSINT/ExtendReality.html"><strong aria-hidden="true">2.5.</strong> Extend Reality</a></li><li class="chapter-item expanded "><a href="../../DeconstruCT.F/Web/Here'saflag.html"><strong aria-hidden="true">2.6.</strong> Here's a flag</a></li><li class="chapter-item expanded "><a href="../../DeconstruCT.F/Web/Please.html"><strong aria-hidden="true">2.7.</strong> Please</a></li><li class="chapter-item expanded "><a href="../../DeconstruCT.F/Forensics/Pirates.html"><strong aria-hidden="true">2.8.</strong> Pirates</a></li><li class="chapter-item expanded "><a href="../../DeconstruCT.F/Forensics/TegRads.html"><strong aria-hidden="true">2.9.</strong> Teg Rads</a></li><li class="chapter-item expanded "><a href="../../DeconstruCT.F/Forensics/TheMissingJournalist.html"><strong aria-hidden="true">2.10.</strong> The Missing Journalist</a></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">CTF Writeups</h1>
+
+                    <div class="right-buttons">
+                        <a href="../../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="problem-statement"><a class="header" href="#problem-statement">Problem Statement:</a></h1>
+<h2 id="solution"><a class="header" href="#solution">Solution:</a></h2>
+<p>This question seemed very similar to RSA-1</p>
+<pre><code>e: 3
+c: 2780321436921227845269766067805604547641764672251687438825498122989499386967784164108893743279610287605669769995594639683212592165536863280639528420328182048065518360606262307313806591343147104009274770408926901136562839153074067955850912830877064811031354484452546219065027914838811744269912371819665118277221
+n: 23571113171923293137414347535961677173798389971011031071091131271311371391491511571631671731791811911931971992112232272292332392412512572632692712772812832933073113133173313373473493533593673733793833893974014094194214314334394434494574614634674794874914995035095215235415475575635695715775875935996016076136176196316416436476536596616736776836917017097197277337397437517577617697737877978098118218238278298398538578598638778818838879079119199299379419479539679719779839919971009101310191431936117404941729571877755575331917062752829306305198341421305376800954281557410379953262534149212590443063350628712530148541217933209759909975139820841212346188350112608680453894647472456216566674289561525527394398888860917887112180144144965154878409149321280697460295807024856510864232914981820173542223592901476958693572703687098161888680486757805443187028074386001621827485207065876653623459779938558845775617779542038109532989486603799040658192890612331485359615639748042902366550066934348195272617921683
+</code></pre>
+<p>Similar to RSA-1, I tried unciphering this using RsaCtfTool. It took longer than RSA-1, but it was able to retrive the flag.</p>
+<pre><code>$ python3 RsaCtfTool.py -n 23571113171923293137414347535961677173798389971011031071091131271311371391491511571631671731791811911931971992112232272292332392412512572632692712772812832933073113133173313373473493533593673733793833893974014094194214314334394434494574614634674794874914995035095215235415475575635695715775875935996016076136176196316416436476536596616736776836917017097197277337397437517577617697737877978098118218238278298398538578598638778818838879079119199299379419479539679719779839919971009101310191431936117404941729571877755575331917062752829306305198341421305376800954281557410379953262534149212590443063350628712530148541217933209759909975139820841212346188350112608680453894647472456216566674289561525527394398888860917887112180144144965154878409149321280697460295807024856510864232914981820173542223592901476958693572703687098161888680486757805443187028074386001621827485207065876653623459779938558845775617779542038109532989486603799040658192890612331485359615639748042902366550066934348195272617921683 -e 3 --uncipher 2780321436921227845269766067805604547641764672251687438825498122989499386967784164108893743279610287605669769995594639683212592165536863280639528420328182048065518360606262307313806591343147104009274770408926901136562839153074067955850912830877064811031354484452546219065027914838811744269912371819665118277221
+private argument is not set, the private key will not be displayed, even if recovered.
+
+[*] Testing key /tmp/tmp0y5i24op.
+[*] Performing mersenne_primes attack on /tmp/tmp0y5i24op.
+ 35%|██████████████████████████▍                                                | 18/51 [00:00&lt;00:00, 110538.03it/s]
+[*] Performing system_primes_gcd attack on /tmp/tmp0y5i24op.
+100%|███████████████████████████████████████████████████████████████████████| 7007/7007 [00:00&lt;00:00, 165421.74it/s]
+[*] Performing fibonacci_gcd attack on /tmp/tmp0y5i24op.
+100%|████████████████████████████████████████████████████████████████████████| 9999/9999 [00:00&lt;00:00, 19839.94it/s]
+[*] Performing pastctfprimes attack on /tmp/tmp0y5i24op.
+100%|█████████████████████████████████████████████████████████████████████████| 113/113 [00:00&lt;00:00, 134379.46it/s]
+[*] Performing factordb attack on /tmp/tmp0y5i24op.
+[*] Performing smallq attack on /tmp/tmp0y5i24op.
+[*] Performing small_crt_exp attack on /tmp/tmp0y5i24op.
+Can't load small_crt_exp because sage binary is not installed
+[*] Performing partial_q attack on /tmp/tmp0y5i24op.
+[*] Performing wolframalpha attack on /tmp/tmp0y5i24op.
+[*] Performing wiener attack on /tmp/tmp0y5i24op.
+100%|██████████████████████████████████████████████████████████████████████████████| 3/3 [00:00&lt;00:00, 55924.05it/s]
+100%|██████████████████████████████████████████████████████████████████████████████| 3/3 [00:00&lt;00:00, 60787.01it/s]
+[*] Performing SQUFOF attack on /tmp/tmp0y5i24op.
+[!] Timeout.
+[*] Performing comfact_cn attack on /tmp/tmp0y5i24op.
+[*] Performing qicheng attack on /tmp/tmp0y5i24op.
+Can't load qicheng because sage binary is not installed
+[*] Performing ecm2 attack on /tmp/tmp0y5i24op.
+Can't load ecm2 because sage binary is not installed
+[*] Performing noveltyprimes attack on /tmp/tmp0y5i24op.
+100%|████████████████████████████████████████████████████████████████████████████| 21/21 [00:00&lt;00:00, 77672.30it/s]
+[*] Performing pollard_p_1 attack on /tmp/tmp0y5i24op.
+  0%|                                                                                       | 0/997 [00:23&lt;?, ?it/s]
+[*] Performing z3_solver attack on /tmp/tmp0y5i24op.
+[!] Timeout.
+[*] Performing nsif attack on /tmp/tmp0y5i24op.
+[!] This attack module is not implemented yet
+[*] Performing mersenne_pm1_gcd attack on /tmp/tmp0y5i24op.
+100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 3311/3311 [00:00&lt;00:00, 15634.67it/s]
+[*] Performing primorial_pm1_gcd attack on /tmp/tmp0y5i24op.
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 10000/10000 [00:03&lt;00:00, 3066.76it/s]
+[*] Performing siqs attack on /tmp/tmp0y5i24op.
+Can't load siqs because yafu binary is not installed
+[*] Performing cube_root attack on /tmp/tmp0y5i24op.
+[*] Performing pisano_period attack on /tmp/tmp0y5i24op.
+[*] Performing fermat attack on /tmp/tmp0y5i24op.
+[!] Timeout.
+[*] Performing fermat_numbers_gcd attack on /tmp/tmp0y5i24op.
+  0%|▌                                                                                                                                                                                                  | 31/9999 [00:52&lt;9:27:17,  3.41s/it][!] Timeout.
+  0%|▌                                                                                                                                                                                                  | 31/9999 [01:00&lt;5:21:42,  1.94s/it]
+[*] Performing boneh_durfee attack on /tmp/tmp0y5i24op.
+Can't load boneh_durfee because sage binary is not installed
+[*] Performing londahl attack on /tmp/tmp0y5i24op.
+ 48%|█████████████████████████████████████████████████████████████████████████████████████████▍                                                                                               | 9666222/20000001 [00:59&lt;02:03, 83531.61it/s][!] Timeout.
+ 48%|█████████████████████████████████████████████████████████████████████████████████████████                                                                                               | 9686015/20000001 [01:07&lt;01:12, 143017.41it/s]
+[*] Performing cm_factor attack on /tmp/tmp0y5i24op.
+Can't load cm_factor because sage binary is not installed
+[*] Performing binary_polinomial_factoring attack on /tmp/tmp0y5i24op.
+Can't load binary_polinomial_factoring because sage binary is not installed
+[*] Performing ecm attack on /tmp/tmp0y5i24op.
+Can't load ecm because sage binary is not installed
+[*] Performing smallfraction attack on /tmp/tmp0y5i24op.
+Can't load smallfraction because sage binary is not installed
+[*] Performing euler attack on /tmp/tmp0y5i24op.
+[!] Public key modulus must be congruent 1 mod 4 to work with euler method.
+[*] Performing roca attack on /tmp/tmp0y5i24op.
+Can't load roca because sage binary is not installed
+[*] Performing dixon attack on /tmp/tmp0y5i24op.
+[-] Dixon is too slow for pubkeys &gt; 10^10...
+[*] Performing brent attack on /tmp/tmp0y5i24op.
+[!] Timeout.
+[*] Performing neca attack on /tmp/tmp0y5i24op.
+Can't load neca because neca binary is not installed
+[*] Performing pollard_rho attack on /tmp/tmp0y5i24op.
+[!] Timeout.
+
+Results for /tmp/tmp0y5i24op:
+
+Unciphered data :
+HEX : 0x6473637b74302d6d3335352d773174682d6d3474682d74346b33352d342d6c30742d30662d7370316e337d
+INT (big endian) : 14061500589727237715723597570826081039597762758283503070252061800455951899778424597542833650554379318141
+INT (little endian) : 17526128616085330935096292559852731857787349147109598194257409431478163332579982195604982797419065602916
+utf-8 : dsc{t0-m355-w1th-m4th-t4k35-4-l0t-0f-sp1n3}
+STR : b'dsc{t0-m355-w1th-m4th-t4k35-4-l0t-0f-sp1n3}'
+
+</code></pre>
+<h3 id="notes"><a class="header" href="#notes">Notes:</a></h3>
+<h3 id="reference"><a class="header" href="#reference">Reference:</a></h3>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../../DeconstruCT.F/Cryptography/RSA-1.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                            <a rel="next" href="../../DeconstruCT.F/Cryptography/RSA-3.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../../DeconstruCT.F/Cryptography/RSA-1.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                    <a rel="next" href="../../DeconstruCT.F/Cryptography/RSA-3.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+        <!-- Livereload script (if served using the cli tool) -->
+        <script type="text/javascript">
+            var socket = new WebSocket("ws://localhost:3000/__livereload");
+            socket.onmessage = function (event) {
+                if (event.data === "reload") {
+                    socket.close();
+                    location.reload();
+                }
+            };
+
+            window.onbeforeunload = function() {
+                socket.close();
+            }
+        </script>
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        <script src="../../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../searcher.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+    </body>
+</html>
