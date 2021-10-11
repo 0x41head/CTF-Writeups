@@ -1,5 +1,5 @@
 # Problem Statement:
-![q7](https://user-images.githubusercontent.com/53595853/135752005-7a853207-7b81-4b8f-9b6f-a4c3e5634092.png)
+![q7](https://raw.githubusercontent.com/0x41head/CTF-Writeups/main/src/DeconstruCT.F/Cryptography/CodeDecode/ques.png)
 
 ## Solution:
 This challenge came with three files `cypher.txt` , `encryptedtext.txt` and `encrypter.py`
