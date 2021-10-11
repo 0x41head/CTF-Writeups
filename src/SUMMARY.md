@@ -25,4 +25,6 @@
     - [Teg Rads](./DeconstruCT.F/Forensics/TegRads/TegRads.md)
     - [The Missing Journalist](./DeconstruCT.F/Forensics/The-Missing-Journalist/TheMissingJournalist.md)
 - [Digital Overdose 2021 Autumn CTF](./DOA2021ctf/README.md)
-    
+    - [Hash 1](./DOA2021ctf/Hash%20Cracking/Hash1/hash1.md)
+    - [Hash 2](./DOA2021ctf/Hash%20Cracking/Hash2/hash2.md)
+    - [Hash 3](./DOA2021ctf/Hash%20Cracking/Hash3/hash3.md)

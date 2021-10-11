@@ -7,6 +7,7 @@ A quick google search related to "crack hash online" brought me to https://crack
 
 I pasted the hash in it and retrived the flag.
 
+![flag](https://raw.githubusercontent.com/0x41head/CTF-Writeups/main/src/DOA2021ctf/Hash%20Cracking/Hash1/flag.png)
 ### Notes:
 ### Reference:
 ### Tags:
