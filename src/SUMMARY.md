@@ -28,3 +28,4 @@
     - [Hash 1](./DOA2021ctf/Hash%20Cracking/Hash1/hash1.md)
     - [Hash 2](./DOA2021ctf/Hash%20Cracking/Hash2/hash2.md)
     - [Hash 3](./DOA2021ctf/Hash%20Cracking/Hash3/hash3.md)
+    - [Hash 4](./DOA2021ctf/Hash%20Cracking/Hash4/hash4.md)
