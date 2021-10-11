@@ -3,7 +3,7 @@
 
 ## Solution:
 
-Very similar to (Hash4)[]
+Very similar to [Hash4](https://0x41head.github.io/CTF-Writeups/book/DOA2021ctf/Hash%20Cracking/Hash4/hash4.html)
 
 ```
 $ ./hashid.py -m '$2a$10$QlR/ZlXgQPWfx9JmRffMZutcL3o3w6JAiRbfvGda4u09lrfOvgcH6'
