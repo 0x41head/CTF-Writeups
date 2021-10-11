@@ -2626,6 +2626,7 @@ UINTN strcmp(CHAR8* a, CHAR8* b, UINTN length){
 <p><img src="https://raw.githubusercontent.com/0x41head/CTF-Writeups/main/src/DOA2021ctf/Steganography/Queen&#x27;s%20gambit/ques.png" alt="question" /></p>
 <h2 id="solution-32"><a class="header" href="#solution-32">Solution:</a></h2>
 <p>In this question we are given a .png image of Freddie Mercury</p>
+<p><img src="https://raw.githubusercontent.com/0x41head/CTF-Writeups/main/src/DOA2021ctf/Steganography/Queen&#x27;s%20gambit/Freddie_Mercury.png" alt="Freddie_baby" /></p>
 <pre><code>$ exiftool Freddie_Mercury.png 
 ExifTool Version Number         : 11.88
 File Name                       : Freddie_Mercury.png
@@ -2656,8 +2657,350 @@ Megapixels                      : 0.442
 <h3 id="notes-32"><a class="header" href="#notes-32">Notes:</a></h3>
 <h3 id="reference-32"><a class="header" href="#reference-32">Reference:</a></h3>
 <h3 id="tags-32"><a class="header" href="#tags-32">Tags:</a></h3>
-<p><code>Forensics</code> <code>Steganography</code></p>
-<div style="break-before: page; page-break-before: always;"></div><div style="break-before: page; page-break-before: always;"></div><div style="break-before: page; page-break-before: always;"></div><div style="break-before: page; page-break-before: always;"></div>
+<p><code>Forensics</code> <code>Steganography</code> <code>png</code> <code>image</code></p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="problem-statement-33"><a class="header" href="#problem-statement-33">Problem Statement:</a></h1>
+<p><img src="https://raw.githubusercontent.com/0x41head/CTF-Writeups/main/src/DOA2021ctf/Steganography/The%20Detective/ques.png" alt="question" /></p>
+<h2 id="solution-33"><a class="header" href="#solution-33">Solution:</a></h2>
+<p>In this question we are given a .jpeg image of Detective Pikachu</p>
+<p><img src="https://raw.githubusercontent.com/0x41head/CTF-Writeups/main/src/DOA2021ctf/Steganography/The%20Detective/Pika.jpeg" alt="pika" /></p>
+<p>I used strings on the jpeg</p>
+<pre><code>$ strings Pika.jpeg
+ , #&amp;')*)
+-0-(0%()(
+((((((((((((((((((((((((((((((((((((((((((((((((((
+&quot;Qaq
+&quot;Q#2
+-J+J
+2]_     jQYJ
+(       5%
++MIRv
+Z`l$
+DpF^
+xo&gt;i
+ztPB|
+#!ur
+MwC&gt;
+{Hq4
+GVVI
+sz6L;
+JGFl
+0RI%!   $
+7$]X
+Heidc
+x&quot;yOR
+p?1?
+$7OI
+6Nq%    Z
+D`xC
+1)j
+4YSccK
+J1rt
+ZM/g
+r~UG
+N[a\
+cd&gt;S
+:C\=
+s3ks
+2T?}!
+!dzO
+XsN\
+ml*)
+5'I$
+rZWa
+K#vX
+Y2QlR8
+bh|k
+F7 i
+%&lt;QZp
+n6Tu
+YY'Q
+)0@J
+&quot;#d4
+U.fc#
+p9?!)t
+A$lf
+eey=
+T:4KA
+.GU{
+d^Tmee
+'uNI
+[/de5
+*       Rc
+D((#n
+i]EG
+;!.B\
+@BZ)
+;!'d
+$%I#cu
+TsH
+/ j0G
+6;{.
+o#n&gt;Vy@
+addD
+LWI
+S`fH
+}V{w[L1K
+        R=!9
+s`-q*
+6Mdi
+&amp;q|D
+Q.nquh~
+!7aA5
+#:QMt}
+&gt;;'l
+V_fkX5[
+/&amp;vP
+&amp;nlQ
+Xm`guX
+~#=7
+]P{Y
+P8Qi&lt;
+Wer2
+&amp;-c#
+3#TA
+tYr1
+2p      @
+(j}*6:;c
+*_%z,
+g+#+
+]&amp;Xq
+6MvRLTT!2'
+kZ7c    $
+Ytt1AEvI
++-sH
+=kr&quot;
+.7*k&amp;S^%
+ep^4
+,o[h
+d@ V
+^6_!$
+l2gG
+xVA;
+j9:L
+N+~&gt;Jk
+Pt,_.
+v\~J
+g&gt;T.
+D{6u
+q9:E
+sY]I
+itIv[
+h2,}
+jItK
+iw8\
+?QvOZ
+0xc6
+ 6yE
+vSRJ);
+I\^4
+Ho`F
+Ox;l
+)EDvs
+']6f
+fNXb
+h mK
+GzIk
+{zU8
+)#ny
+(|N*
+d-a|
+J'5\Sd
+\i&lt;Q
+Lp w_gb
+s;4`
+36II
+dyMm
+L8/:
+eiihw}
+:\&lt;8
+7''\f
+**r:
+S%      vacH
+M@ia
+~Wpg
+^UbGj
+)Y-4
+{(c&gt;
+,m&lt;}Wk
+w@RqBO
+Q!w(
+9]&gt;7
+_Xxk&amp;izlrK
+IZ6E
+1+8F#
+HwE;
+e[.M&amp;
+,;Ww
+V&lt;D66b
+e4SI
+~-$_
+ahwz
+| C8
+'tNr
+pP$6
+At9X
+.!f3@y
+Ir\^
+BLYR
+N-'Q
+[]O'
+z'-d
+:ckG
+6t9]~
+RJ\=
+u/DFH
+GIR`5&quot;
+P c4
+eTQ&gt;V8+l
+-oII&amp;
+DnWA
+hy:I
+wC`w
+)#&amp;y
+gw6xtV
+DbK's
+S6LgS
+K1/6{
+g`q;
+kI*F
+A'u#
+d j'90
+QBB'
+b&lt;C|-&lt;LJ
+,dZI
+8Kbq,
+Rtlp6hQ
+kvhP
+th?(
+\C7w
+*(2]
+RDX.
+7{LA
+w%I -O
+`TqHK
+&lt;|ty
+vhKP
+1Z&lt;k
+Gt8+
+2?)K
+3g%W
+0YUe
+k],YS3N
+'vau
+U$m4
+j1(Y
+~|`p
+B0mPv
+N09N:
+Lq_\
+ByFp
+&amp;;3&lt;
+VW?d%
+wZ!.
+FUR(
+_       yE+C)
+jU@6
+#pGb
+k]LYT
+V1}9
+CAZ@'
+T,iS3d2H
+|2.F
+)LHLh
+Cd-f
+gEi6_b
+ZLtv
+q*o!
+ jVZ
+6&gt;)`
+&gt;;&quot;n
+mkIu
+pV.n
+Ce {
+6$84Q
+W el
+6eO,
+?|gb
+j=D{
+2f7I`
+Y 65
+0bBr
+Z]:'LAp
+$xl_
+m7Kkq]
+#`{*X
+n8+NV
+T|^a
++$Y-
+9s&gt;0
+fS\#
+TgOR
+&gt;~5W
+.#ae]
+s@cF
+`sqC
+X}C%
+C&quot;js
+k4[^
+7.ke
+7jf4
+Dlk4
+)tz\
+cIqV
+u#[|
+S\-C,A
+Bz&amp;=
+J~4/#e_
+`yL&lt;4~
+'uLF
+8Q]'Kq
+n\O1
+3&gt;':
+u|Lv
+0nVG
+WNl1
+G?Oi
+*Y3g
+\Kee
+`u'ic
+&lt;A0k
+{(,cr
+'j{}
+A&amp;(0
+jpPC2&lt;
+'7,6=
+'X#}
+WlCU
++aQ:
+)%kH:
+?O*6d
+&lt;G\]N&gt;
+6&gt;RI 
+nRIk
+?!r=GW
+6M1k
+yrT`&gt;
+!$p(
+BAKZ
+DO{H1d1nG_iN_Pl41n_SiGhT}
+</code></pre>
+<p>And took the flag</p>
+<h3 id="notes-33"><a class="header" href="#notes-33">Notes:</a></h3>
+<h3 id="reference-33"><a class="header" href="#reference-33">Reference:</a></h3>
+<h3 id="tags-33"><a class="header" href="#tags-33">Tags:</a></h3>
+<p><code>Forensics</code> <code>Steganography</code> <code>jpg</code> <code>image</code></p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="problem-statement-34"><a class="header" href="#problem-statement-34">Problem Statement:</a></h1>
+<p><img src="https://raw.githubusercontent.com/0x41head/CTF-Writeups/main/src/DOA2021ctf/Steganography/Not%20exactly%20Nestene&#x27;s%20Autons/ques.png" alt="question" /></p>
+<h2 id="solution-34"><a class="header" href="#solution-34">Solution:</a></h2>
+<p>In this question we are given a .png screenshot of the old creepypasta video I feel fantastic</p>
+<p><img src="https://raw.githubusercontent.com/0x41head/CTF-Writeups/main/src/DOA2021ctf/Steganography/Not%20exactly%20Nestene&#x27;s%20Autons/tara.png" alt="Freddie_baby" /></p>
+<p>I used Stegsolve to check a different LSB planes and found the flag in Red Plane 0</p>
+<p><img src="https://raw.githubusercontent.com/0x41head/CTF-Writeups/main/src/DOA2021ctf/Steganography/Not%20exactly%20Nestene&#x27;s%20Autons/flag.png" alt="flag" /></p>
+<h3 id="notes-34"><a class="header" href="#notes-34">Notes:</a></h3>
+<h3 id="reference-34"><a class="header" href="#reference-34">Reference:</a></h3>
+<h3 id="tags-34"><a class="header" href="#tags-34">Tags:</a></h3>
+<p><code>Forensics</code> <code>Steganography</code> <code>png</code> <code>image</code></p>
+<div style="break-before: page; page-break-before: always;"></div><div style="break-before: page; page-break-before: always;"></div>
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
