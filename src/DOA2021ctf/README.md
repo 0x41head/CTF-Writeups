@@ -21,4 +21,4 @@
   <li>Cloud Forensics: 0/9 (Didn't try to figure this one out)</li> 
   </ul>
 
-Even though this is only my 3rd CTF, I have a suspicion that 34 will be the highest number of chalenges I ever solve in a particular CTF.
+Even though this is only my 3rd CTF, I have a suspicion that 34 will be the highest number of challenges I ever solve in a particular CTF.

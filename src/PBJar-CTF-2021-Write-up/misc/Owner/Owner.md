@@ -42,8 +42,8 @@ def changeOwner(address _newOwnerAddr) payable:
 From the decompiled code, I saw that there is a changeOwner function which takes a ethereum wallet address as input.
 
 From here I tried guesing the ABI of the contract from this decompiled code.
-After a bit of trial and error, and refrence from [readFlag1](https://github.com/0x41head/PBJar-CTF-2021-Write-up/blob/main/misc/readFlag1.md) and 
-[readFlag3](https://github.com/0x41head/PBJar-CTF-2021-Write-up/blob/main/misc/readFlag3.md) I came up with this.
+After a bit of trial and error, and refrence from [readFlag1](https://0x41head.github.io/CTF-Writeups/book/PBJar-CTF-2021-Write-up/misc/readFlag1/readFlag1.html) and 
+[readFlag3](https://0x41head.github.io/CTF-Writeups/book/PBJar-CTF-2021-Write-up/misc/readFlag3/readFlag3.html) I came up with this.
 
 ```
 [

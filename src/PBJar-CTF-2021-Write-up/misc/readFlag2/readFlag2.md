@@ -3,7 +3,7 @@
 
 ## Solution:
 
-To retrive this flag, I took the same approach as I did with [readFlag1](https://0x41head.github.io/CTF-Writeups/book/PBJar-CTF-2021-Write-up/misc/readFlag1.html) and
+To retrive this flag, I took the same approach as I did with [readFlag1](https://0x41head.github.io/CTF-Writeups/book/PBJar-CTF-2021-Write-up/misc/readFlag1/readFlag1.html) and
 looked into the contract source code in the Ropsten network https://ropsten.etherscan.io/address/0x585C403bC5c7eb62BF3630c7FeF1F837603bA866
 
 However this time, as stated in the question, I was greeted with neither the source code nor the ABI just the bytecode.
