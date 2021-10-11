@@ -3,14 +3,25 @@
 
 ## Solution:
 
-A quick google search related to "crack hash online" brought me to https://crackstation.net/
+This challenge came attached with a `chall` file.
 
-I pasted the hash in it and retrived the flag.
+According to this question, I have to find the C file name before the `chall` file was compiled.
 
-![flag](https://raw.githubusercontent.com/0x41head/CTF-Writeups/main/src/DOA2021ctf/Hash%20Cracking/Hash1/flag.png)
+I used `rabin2` to show all the exported symbols and then used `grep` along with some basic regex to get all C files.
+
+```
+$ rabin2 -qs chall | grep -i '\.c$'
+0x00000000 0 crtstuff.c
+0x00000000 0 u_f0unD_dA_f1a4y4Y.c
+0x00000000 0 crtstuff.c
+```
+Putting `u_f0unD_dA_f1a4y4Y` in the proper flag notation, I retrieved the flag.
+
 ### Notes:
 ### Reference:
 https://www.youtube.com/watch?v=ubpBELyn0YM&list=PLfoNkunx5xzEZFfkiy2qBu1OONqtL0aiz&index=2
+
+https://r2wiki.readthedocs.io/en/latest/tools/rabin2/
 
 ### Tags:
 `Reversing` 

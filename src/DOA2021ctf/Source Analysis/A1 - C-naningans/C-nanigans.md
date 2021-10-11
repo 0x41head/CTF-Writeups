@@ -315,13 +315,11 @@ UINTN strcmp(CHAR8* a, CHAR8* b, UINTN length){
 
 at the bottom I saw a macro definition for `fp3` which, I thought, could be an acronym for flag part 3.
 
-A quicksearch for `fp2` and `fp1` gets me `#define fp2 0x733075526333` and `#define fp1 0x444f7b` respectively.
+A quick search for `fp2` and `fp1` brought me to `#define fp2 0x733075526333` and `#define fp1 0x444f7b` respectively.
 
 I then also searched for `fp4` and found `#define fp4 0x7d`
 
-
-
-Combining all three of these hexes I got
+Combining all four of these hexes in order I got
 `444f7b7330755263335f406e616c793331737d`
 
 Converting this to ascii I got `DO{s0uRc3_@naly31s}` aka the flag :)

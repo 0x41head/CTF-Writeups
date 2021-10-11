@@ -2566,9 +2566,9 @@ UINTN strcmp(CHAR8* a, CHAR8* b, UINTN length){
 
 </code></pre>
 <p>at the bottom I saw a macro definition for <code>fp3</code> which, I thought, could be an acronym for flag part 3.</p>
-<p>A quicksearch for <code>fp2</code> and <code>fp1</code> gets me <code>#define fp2 0x733075526333</code> and <code>#define fp1 0x444f7b</code> respectively.</p>
+<p>A quick search for <code>fp2</code> and <code>fp1</code> brought me to <code>#define fp2 0x733075526333</code> and <code>#define fp1 0x444f7b</code> respectively.</p>
 <p>I then also searched for <code>fp4</code> and found <code>#define fp4 0x7d</code></p>
-<p>Combining all three of these hexes I got
+<p>Combining all four of these hexes in order I got
 <code>444f7b7330755263335f406e616c793331737d</code></p>
 <p>Converting this to ascii I got <code>DO{s0uRc3_@naly31s}</code> aka the flag :)</p>
 <h3 id="notes-28"><a class="header" href="#notes-28">Notes:</a></h3>
@@ -2578,12 +2578,19 @@ UINTN strcmp(CHAR8* a, CHAR8* b, UINTN length){
 <div style="break-before: page; page-break-before: always;"></div><h1 id="problem-statement-29"><a class="header" href="#problem-statement-29">Problem Statement:</a></h1>
 <p><img src="https://raw.githubusercontent.com/0x41head/CTF-Writeups/main/src/DOA2021ctf/Reversing/Dyns%2C%20Syms%2C%20and%20Tabs/ques.png" alt="question" /></p>
 <h2 id="solution-29"><a class="header" href="#solution-29">Solution:</a></h2>
-<p>A quick google search related to &quot;crack hash online&quot; brought me to https://crackstation.net/</p>
-<p>I pasted the hash in it and retrived the flag.</p>
-<p><img src="https://raw.githubusercontent.com/0x41head/CTF-Writeups/main/src/DOA2021ctf/Hash%20Cracking/Hash1/flag.png" alt="flag" /></p>
+<p>This challenge came attached with a <code>chall</code> file.</p>
+<p>According to this question, I have to find the C file name before the <code>chall</code> file was compiled.</p>
+<p>I used <code>rabin2</code> to show all the exported symbols and then used <code>grep</code> along with some basic regex to get all C files.</p>
+<pre><code>$ rabin2 -qs chall | grep -i '\.c$'
+0x00000000 0 crtstuff.c
+0x00000000 0 u_f0unD_dA_f1a4y4Y.c
+0x00000000 0 crtstuff.c
+</code></pre>
+<p>Putting <code>u_f0unD_dA_f1a4y4Y</code> in the proper flag notation, I retrieved the flag.</p>
 <h3 id="notes-29"><a class="header" href="#notes-29">Notes:</a></h3>
 <h3 id="reference-29"><a class="header" href="#reference-29">Reference:</a></h3>
 <p>https://www.youtube.com/watch?v=ubpBELyn0YM&amp;list=PLfoNkunx5xzEZFfkiy2qBu1OONqtL0aiz&amp;index=2</p>
+<p>https://r2wiki.readthedocs.io/en/latest/tools/rabin2/</p>
 <h3 id="tags-29"><a class="header" href="#tags-29">Tags:</a></h3>
 <p><code>Reversing</code> </p>
 

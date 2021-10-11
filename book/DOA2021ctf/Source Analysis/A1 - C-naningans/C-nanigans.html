@@ -445,9 +445,9 @@ UINTN strcmp(CHAR8* a, CHAR8* b, UINTN length){
 
 </code></pre>
 <p>at the bottom I saw a macro definition for <code>fp3</code> which, I thought, could be an acronym for flag part 3.</p>
-<p>A quicksearch for <code>fp2</code> and <code>fp1</code> gets me <code>#define fp2 0x733075526333</code> and <code>#define fp1 0x444f7b</code> respectively.</p>
+<p>A quick search for <code>fp2</code> and <code>fp1</code> brought me to <code>#define fp2 0x733075526333</code> and <code>#define fp1 0x444f7b</code> respectively.</p>
 <p>I then also searched for <code>fp4</code> and found <code>#define fp4 0x7d</code></p>
-<p>Combining all three of these hexes I got
+<p>Combining all four of these hexes in order I got
 <code>444f7b7330755263335f406e616c793331737d</code></p>
 <p>Converting this to ascii I got <code>DO{s0uRc3_@naly31s}</code> aka the flag :)</p>
 <h3 id="notes"><a class="header" href="#notes">Notes:</a></h3>

@@ -137,12 +137,19 @@
                         <h1 id="problem-statement"><a class="header" href="#problem-statement">Problem Statement:</a></h1>
 <p><img src="https://raw.githubusercontent.com/0x41head/CTF-Writeups/main/src/DOA2021ctf/Reversing/Dyns%2C%20Syms%2C%20and%20Tabs/ques.png" alt="question" /></p>
 <h2 id="solution"><a class="header" href="#solution">Solution:</a></h2>
-<p>A quick google search related to &quot;crack hash online&quot; brought me to https://crackstation.net/</p>
-<p>I pasted the hash in it and retrived the flag.</p>
-<p><img src="https://raw.githubusercontent.com/0x41head/CTF-Writeups/main/src/DOA2021ctf/Hash%20Cracking/Hash1/flag.png" alt="flag" /></p>
+<p>This challenge came attached with a <code>chall</code> file.</p>
+<p>According to this question, I have to find the C file name before the <code>chall</code> file was compiled.</p>
+<p>I used <code>rabin2</code> to show all the exported symbols and then used <code>grep</code> along with some basic regex to get all C files.</p>
+<pre><code>$ rabin2 -qs chall | grep -i '\.c$'
+0x00000000 0 crtstuff.c
+0x00000000 0 u_f0unD_dA_f1a4y4Y.c
+0x00000000 0 crtstuff.c
+</code></pre>
+<p>Putting <code>u_f0unD_dA_f1a4y4Y</code> in the proper flag notation, I retrieved the flag.</p>
 <h3 id="notes"><a class="header" href="#notes">Notes:</a></h3>
 <h3 id="reference"><a class="header" href="#reference">Reference:</a></h3>
 <p>https://www.youtube.com/watch?v=ubpBELyn0YM&amp;list=PLfoNkunx5xzEZFfkiy2qBu1OONqtL0aiz&amp;index=2</p>
+<p>https://r2wiki.readthedocs.io/en/latest/tools/rabin2/</p>
 <h3 id="tags"><a class="header" href="#tags">Tags:</a></h3>
 <p><code>Reversing</code> </p>
 
