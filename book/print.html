@@ -3033,7 +3033,7 @@ phreak_file.bmp                                            100%[================
 phreak_file.bmp: RIFF (little-endian) data, WAVE audio, Microsoft PCM, 16 bit, stereo 44100 Hz
 </code></pre>
 <p>After changing the file extension I tried listening to the audio and the sounds were similar to DTMF tones. My suspicion was further validated as in the question there was mention of some old phone from 1999.</p>
-<p>I used (https://unframework.github.io/dtmf-detect/)[https://unframework.github.io/dtmf-detect/] to detect the DTMF tones.
+<p>I used <a href="https://unframework.github.io/dtmf-detect/">https://unframework.github.io/dtmf-detect/</a> to detect the DTMF tones.
 After decoding the DTMF Tones I got:</p>
 <pre><code>22222337777777769999333444555337777
 </code></pre>
@@ -3046,7 +3046,53 @@ After decoding the DTMF Tones I got:</p>
 <p>https://unframework.github.io/dtmf-detect/</p>
 <h3 id="tags-35"><a class="header" href="#tags-35">Tags:</a></h3>
 <p><code>Forensics</code> <code>Steganography</code> <code>wav</code> <code>audio</code></p>
-<div style="break-before: page; page-break-before: always;"></div>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="problem-statement-36"><a class="header" href="#problem-statement-36">Problem Statement:</a></h1>
+<p><img src="https://raw.githubusercontent.com/0x41head/CTF-Writeups/main/src/DOA2021ctf/Steganography/Donald&#x27;s%20youth/ques.png" alt="question" /></p>
+<h2 id="solution-36"><a class="header" href="#solution-36">Solution:</a></h2>
+<p>In this question we are given a .jpg image of Donald Duck </p>
+<p><img src="https://raw.githubusercontent.com/0x41head/CTF-Writeups/main/src/DOA2021ctf/Steganography/Donald&#x27;s%20youth/steg.jpg" alt="Donald" /></p>
+<p>The question mentioned something about a rock concert. That gave me the idea to try brute-forcing this image for hidden data using 'rockyou.txt'</p>
+<pre><code>$ stegseek steg.jpg rockyou.txt
+StegSeek 0.6 - https://github.com/RickdeJager/StegSeek
+
+[i] Found passphrase: &quot;062504012&quot;         
+[i] Original filename: &quot;flag1.txt&quot;.
+[i] Extracting to &quot;steg.jpg.out&quot;.
+</code></pre>
+<p>Bingo !</p>
+<p>The extracted file contained the following:</p>
+<pre><code>DO{4re_y00u_using_a_fast_steg_solve?_
+second part: https://drive.google.com/file/d/1uEKzT1i20H4_RYiwF2KQ9lRPj-BJzjCi/view?usp=sharing
+</code></pre>
+<p>It said that it was a two part flag</p>
+<p>Going to the drive link I get another image of Donald Duck, this time a bit angrier.</p>
+<p><img src="https://raw.githubusercontent.com/0x41head/CTF-Writeups/main/src/DOA2021ctf/Steganography/Donald&#x27;s%20youth/angrysteg.png" alt="AngryDOnald" /></p>
+<p>Running this new png through <code>zsteg</code> gives me the second part of the flag.</p>
+<pre><code>$ zsteg angrysteg.png
+imagedata           .. file: Apple DiskCopy 4.2 image \376, 33488896 bytes, 0x10001 tag size, GCR CLV ssdd (400k), 0x0 format
+b1,bgr,lsb,xy       .. text: &quot;or_ls4_by1ng_ok4y??}&quot;
+b2,r,lsb,xy         .. file: 5View capture file
+b2,r,msb,xy         .. file: VISX image file
+b2,g,lsb,xy         .. file: 5View capture file
+b2,g,msb,xy         .. file: VISX image file
+b2,b,lsb,xy         .. file: 5View capture file
+b2,b,msb,xy         .. file: VISX image file
+b2,rgb,lsb,xy       .. file: 5View capture file
+b2,rgb,msb,xy       .. file: VISX image file
+b2,bgr,lsb,xy       .. file: 5View capture file
+b2,bgr,msb,xy       .. file: VISX image file
+b4,r,msb,xy         .. text: [&quot;w&quot; repeated 9 times]
+b4,g,msb,xy         .. text: [&quot;w&quot; repeated 10 times]
+b4,b,msb,xy         .. text: [&quot;w&quot; repeated 11 times]
+b4,rgb,msb,xy       .. text: [&quot;w&quot; repeated 28 times]
+b4,bgr,msb,xy       .. text: [&quot;w&quot; repeated 29 times]
+</code></pre>
+<p>Joining them and removing the ?s (as told in the question) gives me the flag.</p>
+<h3 id="notes-36"><a class="header" href="#notes-36">Notes:</a></h3>
+<h3 id="reference-36"><a class="header" href="#reference-36">Reference:</a></h3>
+<h3 id="tags-36"><a class="header" href="#tags-36">Tags:</a></h3>
+<p><code>Forensics</code> <code>Steganography</code> <code>jpg</code> <code>png</code> <code>image</code></p>
+
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">

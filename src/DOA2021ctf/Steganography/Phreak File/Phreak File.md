@@ -40,7 +40,7 @@ phreak_file.bmp: RIFF (little-endian) data, WAVE audio, Microsoft PCM, 16 bit, s
 ```
 After changing the file extension I tried listening to the audio and the sounds were similar to DTMF tones. My suspicion was further validated as in the question there was mention of some old phone from 1999.
 
-I used (https://unframework.github.io/dtmf-detect/)[https://unframework.github.io/dtmf-detect/] to detect the DTMF tones.
+I used [https://unframework.github.io/dtmf-detect/](https://unframework.github.io/dtmf-detect/) to detect the DTMF tones.
 After decoding the DTMF Tones I got:
 ```
 22222337777777769999333444555337777
