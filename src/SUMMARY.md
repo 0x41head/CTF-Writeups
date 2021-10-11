@@ -32,5 +32,5 @@
     - [Hash 5](./DOA2021ctf/Hash%20Cracking/Hash5/hash5.md)
     - [Hash 6](./DOA2021ctf/Hash%20Cracking/Hash6/hash6.md)
     - [Hash 7](./DOA2021ctf/Hash%20Cracking/Hash7/hash7.md)
-    - [C-Nanigans](./DOA2021ctf/Source%20Analysis/A1%20-%20C-naningans/C-naningans.md)
+    - [C-Nanigans](./DOA2021ctf/Source%20Analysis/A1%20-%20C-naningans/C-nanigans.md)
     - [Dyns, Syms, and Tabs](./DOA2021ctf/Reversing/Dyns,%20Syms,%20and%20Tabs/DynsSymsandTabs.md)
