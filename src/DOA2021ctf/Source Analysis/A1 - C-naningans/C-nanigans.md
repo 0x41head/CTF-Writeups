@@ -1,5 +1,5 @@
 # Problem Statement:
-![question](https://raw.githubusercontent.com/0x41head/CTF-Writeups/main/src/DOA2021ctf/Hash%20Cracking/Hash3/ques.png)
+![question](https://raw.githubusercontent.com/0x41head/CTF-Writeups/main/src/DOA2021ctf/Source%20Analysis/A1%20-%20C-naningans/ques.png)
 
 ## Solution:
 
