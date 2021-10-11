@@ -135,15 +135,15 @@
                 <div id="content" class="content">
                     <main>
                         <h1 id="problem-statement"><a class="header" href="#problem-statement">Problem Statement:</a></h1>
-<p><img src="https://user-images.githubusercontent.com/53595853/135741811-50fa9e98-971d-4af1-b664-a18ff2099bf3.png" alt="q1" /></p>
+<p><img src="https://raw.githubusercontent.com/0x41head/CTF-Writeups/main/src/DeconstruCT.F/Forensics/Pirates/ques.png" alt="q1" /></p>
 <h2 id="solution"><a class="header" href="#solution">Solution:</a></h2>
 <p>In this challenge we are provided with a <code>network_listen.pcap</code> file.</p>
 <p>For staters, I opened this file using Wireshark.
 Filtering out the <code>http</code> requests I can see a packet with the info <code>GET /i_COULD_have_the_flag.mp4.torrent HTTP/1.1</code></p>
-<p><img src="https://user-images.githubusercontent.com/53595853/135742201-a8bc731d-ecee-4ccc-9738-fae3f235dede.png" alt="11" /></p>
+<p><img src="https://raw.githubusercontent.com/0x41head/CTF-Writeups/main/src/DeconstruCT.F/Forensics/Pirates/1.png" alt="11" /></p>
 <p>I tried going to the website associated with this packet, <code>http://192.168.192.121:8080/i_COULD_have_the_flag.mp4.torrent</code> but I got no response.</p>
 <p>So I took a step backwards, and followed the TCP stream of the HTTP request.</p>
-<p><img src="https://user-images.githubusercontent.com/53595853/135742336-6ab429da-28cc-4597-94bc-d8ad673f68e8.png" alt="12" /></p>
+<p><img src="https://raw.githubusercontent.com/0x41head/CTF-Writeups/main/src/DeconstruCT.F/Forensics/Pirates/2.png" alt="12" /></p>
 <p>There I found the flag</p>
 <h3 id="notes"><a class="header" href="#notes">Notes:</a></h3>
 <h3 id="reference"><a class="header" href="#reference">Reference:</a></h3>

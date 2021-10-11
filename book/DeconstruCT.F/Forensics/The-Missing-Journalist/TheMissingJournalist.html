@@ -135,10 +135,10 @@
                 <div id="content" class="content">
                     <main>
                         <h1 id="problem-statement"><a class="header" href="#problem-statement">Problem Statement:</a></h1>
-<p><img src="https://user-images.githubusercontent.com/53595853/135742436-c0f510a9-3136-468d-a704-4dae4f859d0f.png" alt="q2" /></p>
+<p><img src="https://raw.githubusercontent.com/0x41head/CTF-Writeups/main/src/DeconstruCT.F/Forensics/The-Missing-Journalist/ques.png" alt="q2" /></p>
 <h2 id="solution"><a class="header" href="#solution">Solution:</a></h2>
 <p>In this challenge we are provided a <code>.gif</code> file</p>
-<p><img src="https://user-images.githubusercontent.com/53595853/135742507-6716ad0a-1a8b-4b7d-992b-a998d07b43bc.gif" alt="the_journalist" /></p>
+<p><img src="https://raw.githubusercontent.com/0x41head/CTF-Writeups/main/src/DeconstruCT.F/Forensics/The-Missing-Journalist/the_journalist.gif" alt="the_journalist" /></p>
 <p>I first decided to look into the metadata of the gif using exiftool</p>
 <pre><code>$ exiftool the_journalist.gif
 ExifTool Version Number         : 11.88
@@ -187,9 +187,9 @@ DECIMAL       HEXADECIMAL     DESCRIPTION
 2379840       0x245040        End of Zip archive, footer length: 22
 </code></pre>
 <p>There seems to be a message.pdf inside it.</p>
-<p><img src="https://user-images.githubusercontent.com/53595853/135742801-257d0e93-2013-464a-8c12-f34e0b285425.png" alt="21" /></p>
+<p><img src="https://raw.githubusercontent.com/0x41head/CTF-Writeups/main/src/DeconstruCT.F/Forensics/The-Missing-Journalist/1.png" alt="21" /></p>
 <p>I try that string I got, when looking into the metadata, as my password.</p>
-<p><img src="https://user-images.githubusercontent.com/53595853/135742876-fd7e03ce-f399-4e06-9dfb-5641e494607c.png" alt="22" /></p>
+<p><img src="https://raw.githubusercontent.com/0x41head/CTF-Writeups/main/src/DeconstruCT.F/Forensics/The-Missing-Journalist/2.png" alt="22" /></p>
 <p>and retrieve the flag !</p>
 <h3 id="notes"><a class="header" href="#notes">Notes:</a></h3>
 <h3 id="reference"><a class="header" href="#reference">Reference:</a></h3>
