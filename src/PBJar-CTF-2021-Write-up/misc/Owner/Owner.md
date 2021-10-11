@@ -1,12 +1,12 @@
 # Problem Statement:
-![owner](https://user-images.githubusercontent.com/53595853/133981817-470e2197-cc00-4af4-9ce2-12269b603c2a.png)
+![owner](https://raw.githubusercontent.com/0x41head/CTF-Writeups/main/src/PBJar-CTF-2021-Write-up/misc/Owner/ques.png)
 
 ## Solution:
 
 The first thing I did was check the url given in the challenge. After the site loaded, it asked me to connect my metamask wallet to it.
 After connecting my wallet, the website greeted me with this.
 
-![notowner](https://user-images.githubusercontent.com/53595853/133991228-c331c25f-7047-41f4-b000-d19217219647.png)
+![notowner](https://raw.githubusercontent.com/0x41head/CTF-Writeups/main/src/PBJar-CTF-2021-Write-up/misc/Owner/webpage.png)
 
 Next, I checked out the [contract address of the challenge](https://ropsten.etherscan.io/address/0x850C8db4739F66869757f09752811c4b692F02b8)
 
@@ -66,14 +66,14 @@ After a bit of trial and error, and refrence from [readFlag1](https://github.com
 
 Using this ABI, I attempted to interact with the contract.
 
-![interract with contract](https://user-images.githubusercontent.com/53595853/133996613-08edda66-a62e-4e2b-945a-95a0f2fdbb4a.png)
+![interract with contract](https://raw.githubusercontent.com/0x41head/CTF-Writeups/main/src/PBJar-CTF-2021-Write-up/misc/Owner/ABI.png)
 
 Success!
 The transaction went through which made me the owner of that contract.
 
 I went back to the webpage and retrived the flag.
 
-![falg](https://user-images.githubusercontent.com/53595853/133997002-357aa004-b2a0-48f5-b305-a32a55052eb0.png)
+![falg](https://raw.githubusercontent.com/0x41head/CTF-Writeups/main/src/PBJar-CTF-2021-Write-up/misc/Owner/flag.png)
 
 
 ### Notes:

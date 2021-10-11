@@ -1,5 +1,5 @@
 # Problem Statement:
-![readflag1](https://user-images.githubusercontent.com/53595853/133966574-48d005e7-5157-4a2e-b249-a17265b76b0a.png)
+![readflag1](https://raw.githubusercontent.com/0x41head/CTF-Writeups/main/src/PBJar-CTF-2021-Write-up/misc/readFlag1/ques.png)
 ## Solution:
 
 I had to look into the code of the smart contract to retrive this flag.
@@ -8,7 +8,7 @@ The challege statement told me that the contract was on the Ropsten network, so 
 
 One look at the contract source code told me what the flag was.
 
-![crf1](https://user-images.githubusercontent.com/53595853/133967600-6563798e-c8cd-4f63-be47-6130e9a94d0c.png)
+![crf1](https://raw.githubusercontent.com/0x41head/CTF-Writeups/main/src/PBJar-CTF-2021-Write-up/misc/readFlag1/flag.png)
 
 ### Notes:
 ### Reference:

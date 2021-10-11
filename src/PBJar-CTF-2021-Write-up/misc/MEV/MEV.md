@@ -1,6 +1,6 @@
 # Problem Statement:
 
-![mev](https://user-images.githubusercontent.com/53595853/133980389-8566bf06-edbd-4445-bf33-ed22cd96e7e6.png)
+![mev](https://raw.githubusercontent.com/0x41head/CTF-Writeups/main/src/PBJar-CTF-2021-Write-up/misc/MEV/ques.png)
 
 ## Solution:
 
@@ -25,15 +25,15 @@ The first thing I did was look into the transactions that were involved in the [
 Keeping point #2 in mind, I looked for transactions with low gas prices.
 The very first transaction in the block had a low gas price of 0.01 gwei.
 
-![gwei](https://user-images.githubusercontent.com/53595853/133987379-5950e63e-c8e3-42f5-b7ed-9e629d4a31fc.png)
+![gwei](https://raw.githubusercontent.com/0x41head/CTF-Writeups/main/src/PBJar-CTF-2021-Write-up/misc/MEV/bribe.png)
 
 Looking further into the transaction hash I confirmed that it is a private transaction.
 
-![trans](https://user-images.githubusercontent.com/53595853/133987593-86b7f3a5-4312-4eb2-85fd-b5c1e93aa85c.png)
+![trans](https://raw.githubusercontent.com/0x41head/CTF-Writeups/main/src/PBJar-CTF-2021-Write-up/misc/MEV/bribe_details.png)
 
 I then checked the internal transactions to see the exact amount of ether that was sent to the miner of the block `0xb7e390864a90b7b923c9f9310c6f98aafe43f707`
 
-![internaltx](https://user-images.githubusercontent.com/53595853/133987747-0d77e32e-ea90-40a6-ad92-f71e7d9f6a52.png)
+![internaltx](https://raw.githubusercontent.com/0x41head/CTF-Writeups/main/src/PBJar-CTF-2021-Write-up/misc/MEV/flag.png)
 
 I discovered the bribe, and more importantly the flag!
 

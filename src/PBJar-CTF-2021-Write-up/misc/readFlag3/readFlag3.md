@@ -1,5 +1,5 @@
 # Problem Statement:
-![rf3](https://user-images.githubusercontent.com/53595853/133971693-e04cd608-f676-41a3-992d-28ff41dcce66.png)
+![rf3](https://raw.githubusercontent.com/0x41head/CTF-Writeups/main/src/PBJar-CTF-2021-Write-up/misc/readFlag3/ques.png)
 
 ## Solution:
 
@@ -9,7 +9,7 @@ https://ropsten.etherscan.io/address/0xe2a9e67bdA26Dd48c8312ea1FE6a7C111e5D7a7A#
 
 After looking around a bit I found the flag.
 
-![rf3-2](https://user-images.githubusercontent.com/53595853/133972676-50c3460a-8c44-42a1-ad97-5c95da0efd3a.png)
+![rf3-2](https://raw.githubusercontent.com/0x41head/CTF-Writeups/main/src/PBJar-CTF-2021-Write-up/misc/readFlag3/flag.png)
 
 ### Notes:
 ### Reference:

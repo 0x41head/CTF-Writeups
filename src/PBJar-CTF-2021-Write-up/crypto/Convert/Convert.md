@@ -1,6 +1,6 @@
  
 # Problem Statement:
-![convert](https://user-images.githubusercontent.com/53595853/133960501-5f7603ff-9a0f-48f3-8c77-d4e502c1c58a.png)
+![convert](https://raw.githubusercontent.com/0x41head/CTF-Writeups/main/src/PBJar-CTF-2021-Write-up/crypto/Convert/ques.png)
 
 ## Solution:
 This challenge tells you what to do in the question itself.

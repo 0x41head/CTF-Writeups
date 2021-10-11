@@ -1,6 +1,6 @@
 
 # Problem Statement:
- ![miner](https://user-images.githubusercontent.com/53595853/133964247-9496dbbc-44be-4540-be11-599dbbf322ab.png)
+ ![miner](https://raw.githubusercontent.com/0x41head/CTF-Writeups/main/src/PBJar-CTF-2021-Write-up/misc/miner/ques.png)
 ## Solution:
 This was an easy one as all I had to do was find the miner on the blockchain.
 

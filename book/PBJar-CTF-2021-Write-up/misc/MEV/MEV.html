@@ -135,7 +135,7 @@
                 <div id="content" class="content">
                     <main>
                         <h1 id="problem-statement"><a class="header" href="#problem-statement">Problem Statement:</a></h1>
-<p><img src="https://user-images.githubusercontent.com/53595853/133980389-8566bf06-edbd-4445-bf33-ed22cd96e7e6.png" alt="mev" /></p>
+<p><img src="https://raw.githubusercontent.com/0x41head/CTF-Writeups/main/src/PBJar-CTF-2021-Write-up/misc/MEV/ques.png" alt="mev" /></p>
 <h2 id="solution"><a class="header" href="#solution">Solution:</a></h2>
 <p>As someone with no prior knowledge about MEVs, it took some research from my part to understand how tipping works in MEVs</p>
 <pre><code>   1. Bidding gas fees that are above or the same as a target transaction’s to ensure your transaction goes 
@@ -152,11 +152,11 @@ For #2, these can be seen when a mined block has one or more transactions with e
 <p>The first thing I did was look into the transactions that were involved in the <a href="https://etherscan.io/block/12983883">block mentioned in the challenge</a></p>
 <p>Keeping point #2 in mind, I looked for transactions with low gas prices.
 The very first transaction in the block had a low gas price of 0.01 gwei.</p>
-<p><img src="https://user-images.githubusercontent.com/53595853/133987379-5950e63e-c8e3-42f5-b7ed-9e629d4a31fc.png" alt="gwei" /></p>
+<p><img src="https://raw.githubusercontent.com/0x41head/CTF-Writeups/main/src/PBJar-CTF-2021-Write-up/misc/MEV/bribe.png" alt="gwei" /></p>
 <p>Looking further into the transaction hash I confirmed that it is a private transaction.</p>
-<p><img src="https://user-images.githubusercontent.com/53595853/133987593-86b7f3a5-4312-4eb2-85fd-b5c1e93aa85c.png" alt="trans" /></p>
+<p><img src="https://raw.githubusercontent.com/0x41head/CTF-Writeups/main/src/PBJar-CTF-2021-Write-up/misc/MEV/bribe_details.png" alt="trans" /></p>
 <p>I then checked the internal transactions to see the exact amount of ether that was sent to the miner of the block <code>0xb7e390864a90b7b923c9f9310c6f98aafe43f707</code></p>
-<p><img src="https://user-images.githubusercontent.com/53595853/133987747-0d77e32e-ea90-40a6-ad92-f71e7d9f6a52.png" alt="internaltx" /></p>
+<p><img src="https://raw.githubusercontent.com/0x41head/CTF-Writeups/main/src/PBJar-CTF-2021-Write-up/misc/MEV/flag.png" alt="internaltx" /></p>
 <p>I discovered the bribe, and more importantly the flag!</p>
 <h3 id="notes"><a class="header" href="#notes">Notes:</a></h3>
 <h3 id="reference"><a class="header" href="#reference">Reference:</a></h3>

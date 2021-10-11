@@ -1,5 +1,5 @@
 # Problem Statement:
-![ReallynotSecureAlgorithm](https://user-images.githubusercontent.com/53595853/133961240-f605b1a0-1bcd-41c7-9bed-a112c5f6747b.png)
+![ReallynotSecureAlgorithm](https://raw.githubusercontent.com/0x41head/CTF-Writeups/main/src/PBJar-CTF-2021-Write-up/crypto/ReallynotSecureAlgorithm/ques.png)
 ## Solution:
 `ReallynotSecureAlgorithm` the zip contained two files `out.txt` and `script.py`
 

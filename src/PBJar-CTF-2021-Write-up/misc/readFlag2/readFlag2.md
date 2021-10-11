@@ -1,5 +1,5 @@
 # Problem Statement:
-![rf2](https://user-images.githubusercontent.com/53595853/133968082-f6bfa243-ee84-492f-97a8-4f9a93197b74.png)
+![rf2](https://raw.githubusercontent.com/0x41head/CTF-Writeups/main/src/PBJar-CTF-2021-Write-up/misc/readFlag2/ques.png)
 
 ## Solution:
 
@@ -8,13 +8,13 @@ looked into the contract source code in the Ropsten network https://ropsten.ethe
 
 However this time, as stated in the question, I was greeted with neither the source code nor the ABI just the bytecode.
 
-![rf2-2](https://user-images.githubusercontent.com/53595853/133969075-77ba544c-d4e8-40f9-8d57-ab24ba576f4a.png)
+![rf2-2](https://raw.githubusercontent.com/0x41head/CTF-Writeups/main/src/PBJar-CTF-2021-Write-up/misc/readFlag2/bytecode.png)
 
 The challenge however explicitly stated that `the ABI of the smart contract is same as the previous one`.
 
 So, to interact with the contract I decided to use https://mycrypto.com
 
-![rf2-3](https://user-images.githubusercontent.com/53595853/133970555-6b311c8d-17f8-4df2-885d-5ca3ed8fb453.png)
+![rf2-3](https://raw.githubusercontent.com/0x41head/CTF-Writeups/main/src/PBJar-CTF-2021-Write-up/misc/readFlag2/flag.png)
 
 and I got the flag! 
 

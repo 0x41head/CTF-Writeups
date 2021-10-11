@@ -1,13 +1,13 @@
  
 # Problem Statement:
 
-![artmys](https://user-images.githubusercontent.com/53595853/133997989-20d37eab-2fcd-403b-b86f-3c40bf8b14ef.png)
+![artmys](https://raw.githubusercontent.com/0x41head/CTF-Writeups/main/src/PBJar-CTF-2021-Write-up/forensics/ArtMystery/ques.png)
 
 ## Solution:
 
 Downloading the `art.png` file I saw that it was corrupted.
 
-![ar](https://user-images.githubusercontent.com/53595853/133999159-e57d5535-945d-4fb1-bde3-a14f853e9e0a.png)
+![ar](https://raw.githubusercontent.com/0x41head/CTF-Writeups/main/src/PBJar-CTF-2021-Write-up/forensics/ArtMystery/error_message.png)
 
 I then decided to run a check to ensure it was actually a png file.
 
@@ -110,7 +110,7 @@ No errors detected in art.png (30 chunks, 52.6% compression).
 ```
 I opened the file and
 
-![art](https://user-images.githubusercontent.com/53595853/134005162-c7a5b9c1-bf8b-4dc7-b216-cc4edf433dfa.png)
+![art](https://raw.githubusercontent.com/0x41head/CTF-Writeups/main/src/PBJar-CTF-2021-Write-up/forensics/ArtMystery/non-error.png)
 
 retrieved the flag!
 
