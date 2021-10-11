@@ -1,10 +1,10 @@
 # Problem Statement:
-![q2](https://user-images.githubusercontent.com/53595853/135742436-c0f510a9-3136-468d-a704-4dae4f859d0f.png)
+![q2](https://raw.githubusercontent.com/0x41head/CTF-Writeups/main/src/DeconstruCT.F/Forensics/The-Missing-Journalist/ques.png)
 
 ## Solution:
 In this challenge we are provided a `.gif` file
 
-![the_journalist](https://user-images.githubusercontent.com/53595853/135742507-6716ad0a-1a8b-4b7d-992b-a998d07b43bc.gif)
+![the_journalist](https://raw.githubusercontent.com/0x41head/CTF-Writeups/main/src/DeconstruCT.F/Forensics/The-Missing-Journalist/the_journalist.gif)
 
 I first decided to look into the metadata of the gif using exiftool
 
@@ -64,11 +64,11 @@ DECIMAL       HEXADECIMAL     DESCRIPTION
 ```
 There seems to be a message.pdf inside it.
 
-![21](https://user-images.githubusercontent.com/53595853/135742801-257d0e93-2013-464a-8c12-f34e0b285425.png)
+![21](https://raw.githubusercontent.com/0x41head/CTF-Writeups/main/src/DeconstruCT.F/Forensics/The-Missing-Journalist/1.png)
 
 I try that string I got, when looking into the metadata, as my password.
 
-![22](https://user-images.githubusercontent.com/53595853/135742876-fd7e03ce-f399-4e06-9dfb-5641e494607c.png)
+![22](https://raw.githubusercontent.com/0x41head/CTF-Writeups/main/src/DeconstruCT.F/Forensics/The-Missing-Journalist/2.png)
 
 and retrieve the flag !
 

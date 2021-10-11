@@ -1,5 +1,5 @@
 # Problem Statement:
-![q3](https://user-images.githubusercontent.com/53595853/135743005-5651cbda-735b-4f04-935f-c1ed27b7ac0d.png)
+![q3](https://raw.githubusercontent.com/0x41head/CTF-Writeups/main/src/DeconstruCT.F/Forensics/TegRads/1.png)
 
 ## Solution:
 In the challenge we are give a `pdf` file.

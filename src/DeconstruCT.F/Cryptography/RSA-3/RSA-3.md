@@ -1,5 +1,5 @@
 # Problem Statement:
-![q6](https://user-images.githubusercontent.com/53595853/135751543-4745219f-6022-4ac8-871b-6f9ac70d6a83.png)
+![q6](https://raw.githubusercontent.com/0x41head/CTF-Writeups/main/src/DeconstruCT.F/Cryptography/RSA-3/ques.png)
 
 ## Solution:
 This challenge came with a public RSA key.

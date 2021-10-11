@@ -1,5 +1,5 @@
 # Problem Statement:
-![q4](https://user-images.githubusercontent.com/53595853/135750378-78a1e93e-4654-4cb5-bf13-ef4c9b35324a.png)
+![q4](https://raw.githubusercontent.com/0x41head/CTF-Writeups/main/src/DeconstruCT.F/Cryptography/RSA-1/ques.png)
 
 
 ## Solution:

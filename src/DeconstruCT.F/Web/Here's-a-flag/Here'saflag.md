@@ -1,5 +1,5 @@
 # Problem Statement:
-![web1](https://user-images.githubusercontent.com/53595853/135755509-ac7ecb89-1bac-45c9-81f9-f6217d3a451d.png)
+![web1](https://raw.githubusercontent.com/0x41head/CTF-Writeups/main/src/DeconstruCT.F/Web/Here's-a-flag/ques.png)
 
 ## Solution:
 I opened the webpage and looked at it's source code.

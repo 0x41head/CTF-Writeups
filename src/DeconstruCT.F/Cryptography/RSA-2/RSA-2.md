@@ -1,4 +1,5 @@
 # Problem Statement:
+![q5](https://raw.githubusercontent.com/0x41head/CTF-Writeups/main/src/DeconstruCT.F/Cryptography/RSA-2/ques.png)
 ## Solution:
 
 This question seemed very similar to RSA-1
