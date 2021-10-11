@@ -31,7 +31,7 @@ Image Size                      : 562x787
 Megapixels                      : 0.442
 ```
 
-The author tag has some base64 text. Decoding this gets us the flag
+The author tag has some base64 text. Decoding this got me the flag
 
 ```
 DO{W3_aR3_th3_Ch4mP10nS}
