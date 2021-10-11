@@ -19,9 +19,9 @@ Putting `u_f0unD_dA_f1a4y4Y` in the proper flag notation, I retrieved the flag.
 
 ### Notes:
 ### Reference:
-https://www.youtube.com/watch?v=ubpBELyn0YM&list=PLfoNkunx5xzEZFfkiy2qBu1OONqtL0aiz&index=2
+(https://www.youtube.com/watch?v=ubpBELyn0YM&list=PLfoNkunx5xzEZFfkiy2qBu1OONqtL0aiz&index=2)
 
-https://r2wiki.readthedocs.io/en/latest/tools/rabin2/
+(https://r2wiki.readthedocs.io/en/latest/tools/rabin2/)
 
 ### Tags:
 `Reversing` 
