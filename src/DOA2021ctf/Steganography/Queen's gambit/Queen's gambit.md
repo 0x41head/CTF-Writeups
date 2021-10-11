@@ -6,6 +6,9 @@
 In this question we are given a .png image of Freddie Mercury
 
 ![Freddie_baby](https://raw.githubusercontent.com/0x41head/CTF-Writeups/main/src/DOA2021ctf/Steganography/Queen's%20gambit/Freddie_Mercury.png)
+
+I simply extracted the exifdata using exiftool 
+
 ```
 $ exiftool Freddie_Mercury.png 
 ExifTool Version Number         : 11.88

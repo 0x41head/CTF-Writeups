@@ -134,7 +134,52 @@
 
                 <div id="content" class="content">
                     <main>
-                        
+                        <h1 id="problem-statement"><a class="header" href="#problem-statement">Problem Statement:</a></h1>
+<p><img src="https://raw.githubusercontent.com/0x41head/CTF-Writeups/main/src/DOA2021ctf/Steganography/Phreak%20File/ques.png" alt="question" /></p>
+<h2 id="solution"><a class="header" href="#solution">Solution:</a></h2>
+<p>In this question we are given a .bmp file. However, when I tried to download it by the normal method (right click then save image) I was met with this webpage</p>
+<p><img src="https://raw.githubusercontent.com/0x41head/CTF-Writeups/main/src/DOA2021ctf/Steganography/Phreak%20File/1.png" alt="Nope" /></p>
+<p>Nothing I did worked here so I used <code>wget</code> to download the file.</p>
+<pre><code>$ wget -c 'https://files-digitaloverdose.ractf.co.uk/challenge-files/46/cbab78f3fe289f8d9cf1ae26acb92749/phreak_file.bmp'
+--2021-10-11 22:23:58--  https://files-digitaloverdose.ractf.co.uk/challenge-files/46/cbab78f3fe289f8d9cf1ae26acb92749/phreak_file.bmp
+Resolving files-digitaloverdose.ractf.co.uk (files-digitaloverdose.ractf.co.uk)... 2600:9000:2244:2600:e:5f3e:3c0:93a1, 2600:9000:2244:5800:e:5f3e:3c0:93a1, 2600:9000:2244:3000:e:5f3e:3c0:93a1, ...
+Connecting to files-digitaloverdose.ractf.co.uk (files-digitaloverdose.ractf.co.uk)|2600:9000:2244:2600:e:5f3e:3c0:93a1|:443... failed: No route to host.
+Connecting to files-digitaloverdose.ractf.co.uk (files-digitaloverdose.ractf.co.uk)|2600:9000:2244:5800:e:5f3e:3c0:93a1|:443... failed: No route to host.
+Connecting to files-digitaloverdose.ractf.co.uk (files-digitaloverdose.ractf.co.uk)|2600:9000:2244:3000:e:5f3e:3c0:93a1|:443... failed: No route to host.
+Connecting to files-digitaloverdose.ractf.co.uk (files-digitaloverdose.ractf.co.uk)|2600:9000:2244:1800:e:5f3e:3c0:93a1|:443... failed: No route to host.
+Connecting to files-digitaloverdose.ractf.co.uk (files-digitaloverdose.ractf.co.uk)|2600:9000:2244:ca00:e:5f3e:3c0:93a1|:443... failed: No route to host.
+Connecting to files-digitaloverdose.ractf.co.uk (files-digitaloverdose.ractf.co.uk)|2600:9000:2244:2c00:e:5f3e:3c0:93a1|:443... failed: No route to host.
+Connecting to files-digitaloverdose.ractf.co.uk (files-digitaloverdose.ractf.co.uk)|2600:9000:2244:4600:e:5f3e:3c0:93a1|:443... failed: No route to host.
+Connecting to files-digitaloverdose.ractf.co.uk (files-digitaloverdose.ractf.co.uk)|2600:9000:2244:2e00:e:5f3e:3c0:93a1|:443... failed: No route to host.
+Connecting to files-digitaloverdose.ractf.co.uk (files-digitaloverdose.ractf.co.uk)|54.192.171.114|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 8509484 (8.1M) [image/bmp]
+Saving to: ‘phreak_file.bmp’
+
+phreak_file.bmp                                            100%[========================================================================================================================================&gt;]   8.12M  3.38MB/s    in 2.4s    
+
+2021-10-11 22:24:02 (3.38 MB/s) - ‘phreak_file.bmp’ saved [8509484/8509484]
+</code></pre>
+<p>After downloading and trying to open the file. It became clear that something was wrong with it.</p>
+<p>So,I decided to use the <code>file</code> command to get some more info and found out that it was actually a wav file.</p>
+<pre><code>$ file 'phreak_file.bmp'
+phreak_file.bmp: RIFF (little-endian) data, WAVE audio, Microsoft PCM, 16 bit, stereo 44100 Hz
+</code></pre>
+<p>After changing the file extension I tried listening to the audio and the sounds were similar to DTMF tones. My suspicion was further validated as in the question there was mention of some old phone from 1999.</p>
+<p>I used (https://unframework.github.io/dtmf-detect/)[https://unframework.github.io/dtmf-detect/] to detect the DTMF tones.
+After decoding the DTMF Tones I got:</p>
+<pre><code>22222337777777769999333444555337777
+</code></pre>
+<p>which when converted to text gave me:</p>
+<pre><code>ACCESSMZFILES
+</code></pre>
+<p>which when changed to the flag format was accepted as the correct flag (:</p>
+<h3 id="notes"><a class="header" href="#notes">Notes:</a></h3>
+<h3 id="reference"><a class="header" href="#reference">Reference:</a></h3>
+<p>https://unframework.github.io/dtmf-detect/</p>
+<h3 id="tags"><a class="header" href="#tags">Tags:</a></h3>
+<p><code>Forensics</code> <code>Steganography</code> <code>wav</code> <code>audio</code></p>
+
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
