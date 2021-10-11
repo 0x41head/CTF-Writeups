@@ -3,7 +3,7 @@
 
 ## Solution:
 
-Very similar to [Hash4](https://0x41head.github.io/CTF-Writeups/book/DOA2021ctf/Hash%20Cracking/Hash4/hash4.html) and [Hash5](https://0x41head.github.io/CTF-Writeups/book/DOA2021ctf/Hash%20Cracking/Hash5/hash5.html)
+Very similar to [Hash 4](https://0x41head.github.io/CTF-Writeups/book/DOA2021ctf/Hash%20Cracking/Hash4/hash4.html) and [Hash 5](https://0x41head.github.io/CTF-Writeups/book/DOA2021ctf/Hash%20Cracking/Hash5/hash5.html)
 
 ```
 $ ./hashid.py -m '$1$veryrand$QetWu27IoJ2FFSG30xKAQ.'
