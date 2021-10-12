@@ -4,7 +4,7 @@
 ## Solution:
 This challenge came along with the .jpg image below :
 
-![quest](https://raw.githubusercontent.com/0x41head/CTF-Writeups/main/src/DOA2021ctf/OSINT/One%20of%20the%20classics/c4.jfif)
+![quest](https://raw.githubusercontent.com/0x41head/CTF-Writeups/main/src/DOA2021ctf/OSINT/One%20of%20the%20classics/c4.jpg)
 
 Reverse searching this image brought me to [this blogpost](https://fightersgeneration.com/news1/capcom-store-tokyo2.htm) which told me that the picture was from Capcom Store Tokyo.
 
