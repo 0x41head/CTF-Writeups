@@ -5,7 +5,7 @@
 
 This challenge came along with `more.7z` file which when extracted gave me `more.log`.
 
-Similar to [Ingress](),I tried usign grep to find specific words in the log
+Similar to [Ingress](https://0x41head.github.io/CTF-Writeups/book/DOA2021ctf/Log%20Analysis/Ingress/Ingress.html),I tried usign grep to find specific words in the log
 ```
 $ strings more.log | grep -i 'pass'
 2021-08-03 08:55:00 45.85.1.176 GET ../..//passwords.bckp - 443 - 200.13.84.124 Mozilla/5.0+(Windows+NT+5.1;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/60.0.3112.90+Safari/537.36 - 404 0 0 27
