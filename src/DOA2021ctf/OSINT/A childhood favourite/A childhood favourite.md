@@ -4,7 +4,7 @@
 ## Solution:
 This challenge came along with the .jpg image below :
 
-![quest](https://raw.githubusercontent.com/0x41head/CTF-Writeups/main/src/DOA2021ctf/OSINT/A%20childhood%20favourite/c3.jfif)
+![quest](https://raw.githubusercontent.com/0x41head/CTF-Writeups/main/src/DOA2021ctf/OSINT/A%20childhood%20favourite/c3.jpg)
 
 Reverse searching this image brought me to some dude's instagram.
 

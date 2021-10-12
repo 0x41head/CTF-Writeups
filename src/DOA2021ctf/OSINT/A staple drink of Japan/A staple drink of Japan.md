@@ -4,7 +4,7 @@
 ## Solution:
 This challenge came along with the .jpg image below :
 
-![chall](https://raw.githubusercontent.com/0x41head/CTF-Writeups/main/src/DOA2021ctf/OSINT/A%20staple%20drink%20of%20Japan/C8.jfif)
+![chall](https://raw.githubusercontent.com/0x41head/CTF-Writeups/main/src/DOA2021ctf/OSINT/A%20staple%20drink%20of%20Japan/C8.jpg)
 
 Reverse searching this image brought got me nothing.
 
