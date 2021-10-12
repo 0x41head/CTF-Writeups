@@ -53,3 +53,7 @@
         - [Not exactly Nestene's Autons](./DOA2021ctf/Steganography/Not%20exactly%20Nestene's%20Autons/Not%20exactly%20Nestene's%20Autons.md)
         - [Phreak File](./DOA2021ctf/Steganography/Phreak%20File/Phreak%20File.md)
         - [Donald's youth](./DOA2021ctf/Steganography/Donald's%20youth/Donald's%20youth.md)
+    - [Cryptography]()
+        - [Constant Primes](./DOA2021ctf/Cryptography/Constant%20Primes/Constant%20Primes.md)
+        - [Carousel](./DOA2021ctf/Cryptography/Carousel/Carousel.md)
+        - [Simply Cipher](./DOA2021ctf/Cryptography/Simply%20Cipher/Simply%20Cipher.md)

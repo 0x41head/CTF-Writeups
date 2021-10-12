@@ -3,7 +3,7 @@
 <h3>Team Name: Overflow_In_Disguise</h3>
 <h3>Position: #51/721</h3>
 
-<h2>Problems Solved : 34/70</h2>
+<h2>Problems Solved : 34/69</h2>
 
 <h3>Breakdown:</h3>
 <ul>
@@ -17,7 +17,7 @@
   <li>Reverse: 1/4</li>
   <li>Steganography: 6/9</li>
   <li>Web: 2/3</li>
-  <li>Misc: 1/4</li>
+  <li>Misc: 1/3</li>
   <li>Cloud Forensics: 0/9 (Didn't try to figure this one out)</li> 
   </ul>
 
