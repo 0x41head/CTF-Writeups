@@ -4,7 +4,7 @@
 ## Solution:
 This challenge came along with the .jpg image below :
 
-![quest](https://raw.githubusercontent.com/0x41head/CTF-Writeups/main/src/DOA2021ctf/OSINT/An%20island%20of%20mascots/C11.jfif)
+![chall](https://raw.githubusercontent.com/0x41head/CTF-Writeups/main/src/DOA2021ctf/OSINT/An%20island%20of%20mascots/C11.jfif)
 
 Reverse searching this image leads me to this webpage [](https://www.city.amami.lg.jp/kikaku/shise/koho/kokutokun.html)
 
