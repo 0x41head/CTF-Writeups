@@ -68,7 +68,7 @@
         - [Dare enter the mirror world](./DOA2021ctf/OSINT/Dare%20enter%20the%20mirror%20world/Dare%20enter%20the%20mirror%20world.md)
         - [The land of culture](./DOA2021ctf/OSINT/The%20land%20of%20culture/The%20land%20of%20culture.md)
         - [A childhood favourite](./DOA2021ctf/OSINT/A%20childhood%20favourite/A%20childhood%20favourite.md)
-        - [One of the classics](./DOA2021ctf/OSINT/One%20of%20the%20classics/One%20of%20the%20classicsmd)
+        - [One of the classics](./DOA2021ctf/OSINT/One%20of%20the%20classics/One%20of%20the%20classics.md)
         - [The Central Hub](./DOA2021ctf/OSINT/The%20Central%20Hub/The%20Central%20Hub.md)
         - [This way, Emperor Naruhito](./DOA2021ctf/OSINT/This%20way,%20Emperor%20Naruhito/This%20way,%20Emperor%20Naruhito.md)
         - [A staple drink of Japan](./DOA2021ctf/OSINT/A%20staple%20drink%20of%20Japan/A%20staple%20drink%20of%20Japan.md)
