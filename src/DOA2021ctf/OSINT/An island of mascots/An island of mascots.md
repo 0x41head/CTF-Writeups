@@ -6,7 +6,7 @@ This challenge came along with the .jpg image below :
 
 ![chall](https://raw.githubusercontent.com/0x41head/CTF-Writeups/main/src/DOA2021ctf/OSINT/An%20island%20of%20mascots/C11.jpg)
 
-Reverse searching this image leads me to this webpage [](https://www.city.amami.lg.jp/kikaku/shise/koho/kokutokun.html)
+Reverse searching this image leads me to [this webpage](https://www.city.amami.lg.jp/kikaku/shise/koho/kokutokun.html)
 
 Translating this webpage we can see that Kokuto-kun(the name of the mascot) is the mascot for Amami .
 
