@@ -8,7 +8,7 @@ This challenge came along with the .jpg image below :
 
 Reverse searching this image brought me to [this blogpost](https://fightersgeneration.com/news1/capcom-store-tokyo2.htm) which told me that the picture was from Capcom Store Tokyo.
 
-I tried using that as my flag but to no avail. So, I took a bit of inspiration from [A childhood favourite]() and searched for the location of this store.
+I tried using that as my flag but to no avail. So, I took a bit of inspiration from [A childhood favourite](https://0x41head.github.io/CTF-Writeups/book/DOA2021ctf/OSINT/A%20childhood%20favourite/A%20childhood%20favourite.html) and searched for the location of this store.
 
 While doing this one of my attempts `DO{Shibuya_Parco}`, was accepted.
 ### Notes:
