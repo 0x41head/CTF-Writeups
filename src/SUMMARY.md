@@ -57,3 +57,7 @@
         - [Constant Primes](./DOA2021ctf/Cryptography/Constant%20Primes/Constant%20Primes.md)
         - [Carousel](./DOA2021ctf/Cryptography/Carousel/Carousel.md)
         - [Simply Cipher](./DOA2021ctf/Cryptography/Simply%20Cipher/Simply%20Cipher.md)
+    - [Log Analysis]()
+        - [Ingress](./DOA2021ctf/Log%20Analysis/Ingress/Ingress.md)
+        - [Investigation](./DOA2021ctf/Log%20Analysis/Investigation/Investigation.md)
+        - [Backup Policy](./DOA2021ctf/Log%20Analysis/Backup%20Policy/Backup%20Policy.md)

